@@ -77,6 +77,14 @@ header .logo-image a img {
   height: 100px;
 }
 
+.dropdown-item span {
+  padding-left: 1.5rem;
+}
+
+.fa-chevron-right {
+  font-size: 10px;
+}
+
 .link-icon {
     padding: 0;
     position: relative;
@@ -100,13 +108,21 @@ header .logo-image a img {
   left: 0;
   transform-origin: left;
   transform: scaleX(0);
-  transition: transform .3s ease-in-out;
+  transition: transform .2s ease-in-out;
 }
 
 .link-header:hover::before {
   transform-origin: left;
   transform: scaleX(1);
   color: white;
+}
+
+.social-media .nav-item {
+  padding: 0 !important;
+}
+
+.search {
+  width: 14px !important;
 }
 
 .hero img {
@@ -130,10 +146,74 @@ header .logo-image a img {
   margin-top: 20px;
 }
 
+/* Desktop View */
 @media all and (min-width: 992px) {
-	.navbar .dropdown-menu-end{right:0; left: auto;}
-	.navbar .nav-item .dropdown-menu{display:block; opacity: 0;  visibility: hidden; transition:.2s; margin-top: 10px;}
-	.navbar .dropdown-menu.fade-down{top:100%; transform: rotateX(-20deg); transform-origin: 0% 0%;}
-	.navbar .dropdown-menu.fade-up{top:180%;}
-	.navbar .nav-item:hover .dropdown-menu{ transition: .2s; opacity: 1; visibility: visible; top: 100%; transform: rotateX(0deg); }
+	.navbar .dropdown-menu-end {
+    right: 0;
+    left: auto;
+  }
+	.navbar .nav-item .dropdown-menu {
+    display:block;
+    opacity: 0;
+    visibility: hidden;
+    transition: .2s;
+    margin-top: 10px;
+  }
+	.navbar .dropdown-menu.fade-down {
+    top: 100%;
+    transform: rotateX(-20deg);
+    transform-origin: 0% 0%;
+  }
+	.navbar .dropdown-menu .fade-up {
+    top: 180%;
+  }
+	.navbar .nav-item:hover .dropdown-menu {
+    transition: .2s;
+    opacity: 1;
+    visibility: visible;
+    top: 100%;
+    transform: rotateX(0deg);
+  }
+  .dropdown-menu li {
+    position: relative;
+  }
+	.nav-item .submenu { 
+		display: none;
+		position: absolute;
+		left: 100%;
+    top: 0px;
+	}
+	.nav-item .submenu-left { 
+		right: 100%;
+    left: auto;
+	}
+	.dropdown-menu li:hover {
+    background-color: #f1f1f1
+  }
+	.dropdown-menu li:hover .submenu {
+    display: block;
+  }
 }
+/* Desktop View (End) */
+
+/* Smaller than Desktop Devices */
+@media (max-width: 991px) {
+  .dropdown-menu .dropdown-menu{
+    margin-left: .7rem;
+    margin-right: .7rem;
+    margin-bottom: .5rem;
+  }
+  
+  .dropdowns {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  .dropdowns .navbar-toggler {
+    position: relative;
+    font-size: 1.2em;
+    border: 0;
+    width: fit-content;
+  }
+}	
+/* Smaller than Desktop Devices (End) */
