@@ -4,7 +4,7 @@ import hero from "../assets/images/hero.jpg";
 const Main = () => {
     return (
         <div className="hero">
-            <img src={hero} alt="cruise ship anchored on the sea by some coast" />
+            <img src={hero} alt="Cruise ship anchored on the sea near some coast" />
         </div>
     )
 }

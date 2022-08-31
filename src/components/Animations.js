@@ -1,5 +1,5 @@
 $(function(){
-    var $menu = $('.dropdown-menu');
+    let $menu = $('.dropdown-menu');
   
     $('.dropdown-toggle').hover(
       function dropDownToggle() {
@@ -7,10 +7,9 @@ $(function(){
       },
       function dropDownToggle() {
         $menu.css('opacity',0);
-      });
+      })
 })();
 
-  
 
 document.addEventListener("DOMContentLoaded", function(){
   // make it as accordion for smaller screens
