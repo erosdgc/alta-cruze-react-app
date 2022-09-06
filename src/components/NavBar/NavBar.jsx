@@ -1,14 +1,14 @@
 import React from "react";
-// import "./Header.css";
+// import "./NavBar.css";
 import logo from "../../assets/images/icon.png";
 import search from "../../assets/images/loupe.png";
 import CartWidget from "./CartWidget";
 import ItemCount from "../Items/ItemCount";
 
-const Header = () => {
+const NavBar = () => {
 
     const onAdd = (quantity) => {
-        if (quantity === 4) {
+        if (quantity >= 5) {
             alert("Necesitás reservar para 4 o más personas? Por favor contactanos a nuestro email")
         }
         else {
@@ -147,7 +147,7 @@ const Header = () => {
                                         <a className="nav-link dropdown-toggle link-icon" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"><CartWidget /></a>
                                         <ul class="dropdown-menu dropdown-menu-end dropdown-menu-light rounded-0 border-0 bg-tr fade-down shadow-sm bg-blur" aria-labelledby="navbarDropdownMenuLink">
                                             <li><a class="dropdown-item roboto-font d-flex justify-content-center" href="#">
-                                                <ItemCount initial={1} stock={4} onAdd={onAdd} />
+                                                <ItemCount initial={1} stock={5} onAdd={onAdd} />
                                                 </a>
                                             </li>
                                             {/* <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">Add<span></span></a>
@@ -188,4 +188,4 @@ const Header = () => {
     )
 }
 
-export default Header;
+export default NavBar;
