@@ -1,11 +1,21 @@
 import React from "react";
 // import "./Header.css";
 import logo from "../../assets/images/icon.png";
-import search from "../../assets/images/loupe16.png";
-import ItemCount from "../Items/ItemCount";
+import search from "../../assets/images/loupe.png";
 import CartWidget from "./CartWidget";
+import ItemCount from "../Items/ItemCount";
 
 const Header = () => {
+
+    const onAdd = (quantity) => {
+        if (quantity === 4) {
+            alert("Necesitás reservar para 4 o más personas? Por favor contactanos a nuestro email")
+        }
+        else {
+        alert(`Has reservado para ${quantity} persona(s) en el crucero.`);
+        }
+    }
+
     return (
         <div className="bg-blur">
             <header className="navbar navbar-expand-lg">
@@ -26,53 +36,53 @@ const Header = () => {
                                     <a className="nav-link dropdown-toggle link-header" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Destinations</a>
                                     <ul class="dropdown-menu dropdown-menu-light rounded-0 border-0 bg-tr fade-down shadow-sm bg-blur" aria-labelledby="navbarLightDropdownMenuLink">
                                         <li>
-                                            <a class="dropdown-item roboto-font d-flex justify-content-between" href="#">South America <span><i class="fa-solid fa-chevron-right"></i></span></a>
+                                            <a class="dropdown-item roboto-font d-flex justify-content-between" href="../components/Destinations/South-America.jsx">South America <span><i class="fa-solid fa-chevron-right"></i></span></a>
                                             <ul class="submenu dropdown-menu-light rounded-0 border-0 bg-tr fade-down shadow-sm bg-blur list-unstyled">
                                                 <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">2022</a></li>
                                                 <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">New Year</a></li>
                                                 <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">2023</a></li>
                                             </ul>
                                         </li>
-                                        <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">Black Sea <span><i class="fa-solid fa-chevron-right"></i></span></a>
+                                        <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="../components/Destinations/Black-Sea.jsx">Black Sea <span><i class="fa-solid fa-chevron-right"></i></span></a>
                                             <ul class="submenu dropdown-menu-light rounded-0 border-0 bg-tr fade-down shadow-sm bg-blur list-unstyled">
                                                 <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">2023</a></li>
                                             </ul>
                                         </li>
-                                        <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">Oceania <span><i class="fa-solid fa-chevron-right"></i></span></a>
-                                            <ul class="submenu dropdown-menu-light rounded-0 border-0 bg-tr fade-down shadow-sm bg-blur list-unstyled">
-                                                <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">2022</a></li>
-                                                <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">New Year</a></li>
-                                                <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">2023</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">Southern Africa <span><i class="fa-solid fa-chevron-right"></i></span></a>
+                                        <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="../components/Destinations/Oceania.jsx">Oceania <span><i class="fa-solid fa-chevron-right"></i></span></a>
                                             <ul class="submenu dropdown-menu-light rounded-0 border-0 bg-tr fade-down shadow-sm bg-blur list-unstyled">
                                                 <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">2022</a></li>
                                                 <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">New Year</a></li>
                                                 <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">2023</a></li>
                                             </ul>
                                         </li>
-                                        <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">Caribbean <span><i class="fa-solid fa-chevron-right"></i></span></a>
+                                        <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="../components/Destinations/Southern-Africa.jsx">Southern Africa <span><i class="fa-solid fa-chevron-right"></i></span></a>
                                             <ul class="submenu dropdown-menu-light rounded-0 border-0 bg-tr fade-down shadow-sm bg-blur list-unstyled">
                                                 <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">2022</a></li>
                                                 <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">New Year</a></li>
                                                 <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">2023</a></li>
                                             </ul>
                                         </li>
-                                        <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">Mediterranean Sea <span><i class="fa-solid fa-chevron-right"></i></span></a>
-                                            <ul class="submenu dropdown-menu-light rounded-0 border-0 bg-tr fade-down shadow-sm bg-blur list-unstyled">
-                                                <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">2022</a></li>
-                                                <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">2023</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">Antartic <span><i class="fa-solid fa-chevron-right"></i></span></a>
+                                        <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="../components/Destinations/Caribbean.jsx">Caribbean <span><i class="fa-solid fa-chevron-right"></i></span></a>
                                             <ul class="submenu dropdown-menu-light rounded-0 border-0 bg-tr fade-down shadow-sm bg-blur list-unstyled">
                                                 <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">2022</a></li>
                                                 <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">New Year</a></li>
                                                 <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">2023</a></li>
                                             </ul>
                                         </li>
-                                        <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">Central Pacific <span><i class="fa-solid fa-chevron-right"></i></span></a>
+                                        <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="../components/Destinations/Mediterranean-Sea.jsx">Mediterranean Sea <span><i class="fa-solid fa-chevron-right"></i></span></a>
+                                            <ul class="submenu dropdown-menu-light rounded-0 border-0 bg-tr fade-down shadow-sm bg-blur list-unstyled">
+                                                <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">2022</a></li>
+                                                <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">2023</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="../components/Destinations/Antartic.jsx">Antartic <span><i class="fa-solid fa-chevron-right"></i></span></a>
+                                            <ul class="submenu dropdown-menu-light rounded-0 border-0 bg-tr fade-down shadow-sm bg-blur list-unstyled">
+                                                <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">2022</a></li>
+                                                <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">New Year</a></li>
+                                                <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">2023</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="../components/Destinations/Central-Pacific.jsx">Central Pacific <span><i class="fa-solid fa-chevron-right"></i></span></a>
                                             <ul class="submenu dropdown-menu-light rounded-0 border-0 bg-tr fade-down shadow-sm bg-blur list-unstyled">
                                                 <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">2022</a></li>
                                                 <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">2023</a></li>
@@ -133,8 +143,25 @@ const Header = () => {
                                     <li className="nav-item nav-link">
                                         <a className="nav-link link-icon" href="#"><img className="search" src={search} alt="Search button" /></a>
                                     </li>
-                                    <CartWidget />
-                                    <ItemCount />
+                                    <li className="nav-item dropdown nav-link">
+                                        <a className="nav-link dropdown-toggle link-icon" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"><CartWidget /></a>
+                                        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-light rounded-0 border-0 bg-tr fade-down shadow-sm bg-blur" aria-labelledby="navbarDropdownMenuLink">
+                                            <li><a class="dropdown-item roboto-font d-flex justify-content-center" href="#">
+                                                <ItemCount initial={1} stock={4} onAdd={onAdd} />
+                                                </a>
+                                            </li>
+                                            {/* <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">Add<span></span></a>
+                                                <ul class="submenu submenu-left dropdown-menu-light rounded-0 border-0 bg-tr fade-down shadow-sm bg-blur list-unstyled">
+                                                    <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">+</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">Remove<span></span></a>
+                                                <ul class="submenu submenu-left dropdown-menu-light rounded-0 border-0 bg-tr fade-down shadow-sm bg-blur list-unstyled">
+                                                    <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">+</a></li>
+                                                </ul>
+                                            </li> */}
+                                        </ul>
+                                    </li>
                                 </ul>
                             </div>
                             <div className="nav-brands px-3">

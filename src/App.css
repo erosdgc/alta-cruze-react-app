@@ -145,7 +145,7 @@ header div h1 span {
 /* Desktop View */
 @media all and (min-width: 992px) {
 	.navbar .dropdown-menu-end {
-    right: 0;
+    right: 0%;
     left: auto;
   }
 	.navbar .nav-item .dropdown-menu {

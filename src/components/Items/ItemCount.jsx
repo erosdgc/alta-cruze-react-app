@@ -1,19 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 
-const ItemCount = (props) => {
-    const [count, setCount] = React.useState(0);
-    function counter (type){
-        if(!type && count > 0) {
-            setCount(count - 1);
-        }
-        else if(type && count < props.stock) {
-            setCount(count + 1);
-        }
+const ItemCount = ({initial, stock, onAdd}) => {
+
+    const [count, setCount] = useState(initial);
+
+    const increase = () => {
+        setCount(count + 1);
     }
+
+    const decrease = () => {
+        setCount(count - 1);
+    }
+
     return (
-        <div className="">
-            <button className="btn btn-light rounded-0 btnCount px-3" onClick={()=> counter(true)}>0</button>
-            {/* <button className="btn px-3 btn-secondary rounded-0 btnCount w-50" onClick={()=> counter (false)}></button> */}
+        <div className="counter">
+            <button disabled={ count <= 0 } onClick={decrease} className="btn btn-primary rounded-0 btnCount px-3">-</button>
+            <span className="btn btn-light rounded-0 btnCount px-3">{count} Passenger/s</span>
+            <button disabled={ count >= stock } onClick={increase} className="btn btn-primary rounded-0 btnCount px-3">+</button>
+            <div>
+                <button className="btn btn-success" disabled={ stock <= 0 } onClick={ () => onAdd (count) }>Book Now</button>
+            </div>
         </div>
     )
 }
