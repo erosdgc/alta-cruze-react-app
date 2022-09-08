@@ -3,7 +3,7 @@ import 'core-js/actual';
 import NavBar from './components/NavBar/NavBar';
 import Main from './components/Main';
 import Footer from './components/Footer';
-import ItemsListContainer from './components/Items/ItemListContainer';
+import ItemListContainer from './components/Items/ItemListContainer';
 
 function App() {
 
@@ -14,7 +14,7 @@ function App() {
       </div>
       <div className='container-fluid'>
       <Main />
-      <ItemsListContainer greeting='Our Cruises' />
+      <ItemListContainer />
       <Footer />
       </div>
     </div>

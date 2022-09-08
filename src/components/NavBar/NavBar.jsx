@@ -7,15 +7,6 @@ import ItemCount from "../Items/ItemCount";
 
 const NavBar = () => {
 
-    const onAdd = (quantity) => {
-        if (quantity >= 5) {
-            alert("Necesitás reservar para 4 o más personas? Por favor contactanos a nuestro email")
-        }
-        else {
-        alert(`Has reservado para ${quantity} persona(s) en el crucero.`);
-        }
-    }
-
     return (
         <div className="bg-blur">
             <header className="navbar navbar-expand-lg">
@@ -144,23 +135,9 @@ const NavBar = () => {
                                         <a className="nav-link link-icon" href="#"><img className="search" src={search} alt="Search button" /></a>
                                     </li>
                                     <li className="nav-item dropdown nav-link">
-                                        <a className="nav-link dropdown-toggle link-icon" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"><CartWidget /></a>
-                                        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-light rounded-0 border-0 bg-tr fade-down shadow-sm bg-blur" aria-labelledby="navbarDropdownMenuLink">
-                                            <li><a class="dropdown-item roboto-font d-flex justify-content-center" href="#">
-                                                <ItemCount initial={1} stock={5} onAdd={onAdd} />
-                                                </a>
-                                            </li>
-                                            {/* <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">Add<span></span></a>
-                                                <ul class="submenu submenu-left dropdown-menu-light rounded-0 border-0 bg-tr fade-down shadow-sm bg-blur list-unstyled">
-                                                    <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">+</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">Remove<span></span></a>
-                                                <ul class="submenu submenu-left dropdown-menu-light rounded-0 border-0 bg-tr fade-down shadow-sm bg-blur list-unstyled">
-                                                    <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">+</a></li>
-                                                </ul>
-                                            </li> */}
-                                        </ul>
+                                        <a className="nav-link dropdown-toggle link-icon" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <CartWidget />
+                                        </a>
                                     </li>
                                 </ul>
                             </div>
