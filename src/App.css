@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -18,14 +24,14 @@ html {
   font-family: 'Sora', sans-serif;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-}
-
 .bg-tr {
   background-color: hsla(0deg, 0%, 100%, 0.85) !important;
 }
+
+.bg-tr-dark {
+  background-color: rgba(0, 0, 0, 0.3) !important;
+}
+
 
 .bg-blur {
   -webkit-backdrop-filter: blur(.25rem) !important;

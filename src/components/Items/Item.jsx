@@ -5,10 +5,13 @@ const Item = ({ info }) => {
 
     const onAdd = (quantity) => {
         if (quantity >= 5) {
-            alert("Do you need to book for more than 4 people? Please send us an e-mail to bookings@atlascruzer.com")
+            alert("Do you need to book for more than 4 passengers? Please send us an e-mail to bookings@atlascruzer.com")
+        }
+        else if (quantity === 1) {
+            alert(`You have booked for ${quantity} passenger to travel.`); 
         }
         else {
-        alert(`You have booked for ${quantity} person/people to travel.`);
+            alert(`You have booked for ${quantity} passenger(s) to travel.`);
         }
     }
 

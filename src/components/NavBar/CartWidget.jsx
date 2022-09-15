@@ -3,8 +3,9 @@ import React from "react";
 const CartWidget = () => {
     return (
         <div>
-            <li className="nav-item cart">
-                <a className="nav-link link-icon" href=""><i class="fa-solid fa-user"></i></a>
+            <li className="nav-item cart list-unstyled">
+                <i className="nav-link link-icon fa-solid fa-user"></i>
+                <h2>CHECK IN FORMS (CART)</h2>
             </li>
         </div>
     )

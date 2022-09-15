@@ -1,23 +1,29 @@
 import './App.css';
-import 'core-js/actual';
+import { Routes, Route } from 'react-router-dom';
+// import 'core-js/actual';
 import NavBar from './components/NavBar/NavBar';
 import Main from './components/Main';
 import Footer from './components/Footer';
 import ItemListContainer from './components/Items/ItemListContainer';
+import { ItemDetailContainer } from './components/ItemDetail/ItemDetailContainer';
+import CartWidget from './components/NavBar/CartWidget';
 
 function App() {
 
   return (
-    <div>
-      <div className='position-fixed w-100 z-index-999'>
-      <NavBar />
+    <>
+      <div className='sticky-top w-100 z-index-999 top-0'>
+        <NavBar />
       </div>
-      <div className='container-fluid'>
-      <Main />
-      <ItemListContainer />
+      <Routes> 
+          <Route path='/home' element={<Main/>}/>
+          <Route path='/cruises' element={<ItemListContainer/>}/>
+          <Route path='/category' element={<ItemListContainer/>}/>
+          <Route path='/check-in' element={<CartWidget/>}/>
+          <Route path='/item/:id' element={<ItemDetailContainer/>}/>
+      </Routes>
       <Footer />
-      </div>
-    </div>
+    </>
   );
 }
 
