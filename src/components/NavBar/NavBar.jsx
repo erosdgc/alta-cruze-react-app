@@ -2,7 +2,7 @@ import React from "react";
 // import "./NavBar.css";
 import logo from "../../assets/images/icon.png";
 import search from "../../assets/images/loupe.png";
-// import CartWidget from "./CartWidget";
+import CartWidget from "../CartWidget/CartWidget";
 import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
@@ -190,7 +190,7 @@ const NavBar = () => {
                                     </li>
                                     <li className="nav-item dropdown nav-link">
                                        <NavLink className="nav-link dropdown-toggle link-icon" to="/account" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                            {/* <CartWidget /> */}
+                                            <CartWidget />
                                        </NavLink>
                                     </li>
                                 </ul>

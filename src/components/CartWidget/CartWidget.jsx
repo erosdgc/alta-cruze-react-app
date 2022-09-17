@@ -5,7 +5,7 @@ const CartWidget = () => {
         <div>
             <li className="nav-item cart list-unstyled">
                 <i className="nav-link link-icon fa-solid fa-user"></i>
-                <h2>CHECK IN FORMS (CART)</h2>
+                {/* <p>CART</p> */}
             </li>
         </div>
     )
