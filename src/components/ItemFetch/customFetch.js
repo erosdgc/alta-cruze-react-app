@@ -1,6 +1,6 @@
 import cruises from "./Origin";
 
-export const customFetch = () => {
+export function customFetch () {
     return new Promise ((resolve) => {
         setTimeout(() => {
             resolve(cruises);
@@ -8,7 +8,7 @@ export const customFetch = () => {
     })
 }
 
-export const getToDoById = (id) => {
+export function getItemById (id) {
     return new Promise (resolve => {
         setTimeout(() => {
             resolve(cruises.find(prod => prod.id === id))

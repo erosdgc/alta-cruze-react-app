@@ -1,9 +1,10 @@
 import React from "react";
-import ItemCount from "./ItemCount";
+import ItemCount from "../ItemCount/ItemCounter";
+import { Link } from "react-router-dom";
 
-const Item = ({ info }) => {
+export default function Item ({ info }) {
 
-    const onAdd = (quantity) => {
+    function onAdd (quantity) {
         if (quantity >= 5) {
             alert("Do you need to book for more than 4 passengers? Please send us an e-mail to bookings@atlascruzer.com")
         }
@@ -17,13 +18,13 @@ const Item = ({ info }) => {
 
     return (
         <div className="container-xxl">
-            <article className="card rounded-0 border-0 shadow p-3 mt-5">
+            <article className="card rounded-0 border-0 shadow p-3 mt-5" key={info.id}>
                 <div className="row justify-content-md-center">
                     <div className="card border-0 rounded-0 card-image w-50 col-8">
-                        <img className="img-fluid izo" src={info.image} alt={info.alt} />
+                        <Link to={`/item/${info.id}`}><img className="img-fluid izo" src={info.image} alt={info.alt} /></Link>
                     </div>
                     <div className="mx-auto shadow-sm card border-0 rounded-0 card-info p-3 w-25">
-                        <h2 className="card-name roboto-font">{info.cruise}</h2>
+                        <Link to={`/item/${info.id}`}><h2 className="card-name roboto-font">{info.cruise}</h2></Link>
                         <h4 className="departure roboto-font mb-0 initialism">From {info.departure}</h4>
                         <p className="roboto-font initialism mt-3">{info.duration} nights</p>
                         <p className="roboto-font initialism mb-0">Next departure date</p>
@@ -41,4 +42,3 @@ const Item = ({ info }) => {
     )
 }
 
-export default Item;

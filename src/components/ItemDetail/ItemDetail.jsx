@@ -1,23 +1,31 @@
 import React from "react";
+import ItemCount from "../ItemCount/ItemCounter";
 
-export const ItemDetail = ({data}) => {
+export function ItemDetail (cruises) {
+
+    function onAdd (quantity) {
+        if (quantity >= 5) {
+            alert("Do you need to book for more than 4 passengers? Please send us an e-mail to bookings@atlascruzer.com")
+        }
+        else if (quantity === 1) {
+            alert(`You have booked for ${quantity} passenger to travel.`); 
+        }
+        else {
+            alert(`You have booked for ${quantity} passenger(s) to travel.`);
+        }
+    }
 
     return (
         <div className="container-xxl">
-            <article className="card rounded-0 border-0 shadow p-3 mt-5">
-                <div className="row justify-content-md-center">
-                    <div className="card border-0 rounded-0 card-image w-50">
-                        <img className="img-fluid izo" src={data.image} alt={data.alt} />
-                    </div>
-                    <div className="card border-0 rounded-0 mx-auto card-data p-3 w-50 position-absolute bg-tr-dark hover">
-                        <h2 className="card-name roboto-font">{data.cruise}</h2>
-                        <div className="card-btn-buy mt-auto" data-id={data.id}>
-                            <button className="btn btn-success border-0 rounded-0 col-12 py-2">LEARN MORE</button>
-                        </div>
-                    </div>
+            <article className="card rounded-0 border-0 shadow p-3 mt-5 row">
+                <h1 className="text-center roboto-font mt-3">{cruises.cruise}</h1>
+                <h3 className="text-center roboto-font">From {cruises.departure}</h3>
+                <p className="col-8 text-justify m-auto mt-3 roboto-font">{cruises.description}</p>
+                <img className="col-8 m-auto mt-3" src={cruises.image} alt={cruises.alt} />
+                <div className="col-3 m-auto mt-5 mb-4">
+                    <ItemCount initial={1} stock={5} onAdd={onAdd} />
                 </div>
             </article>
         </div>
     )
-    
-}
+};
