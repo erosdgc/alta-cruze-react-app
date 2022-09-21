@@ -1,20 +1,26 @@
 import React, {useState, useEffect} from "react";
 import ItemList from "../ItemList/ItemList";
 import cruises from "../ItemFetch/Origin";
+import { useParams } from "react-router-dom";
 
 function ItemListContainer () {
     const [data, setData] = useState([]);
     // const [setData] = useState([]);
 
+    const {categoryId} = useParams()
+
     useEffect( () => {
         const getData = new Promise (resolve => {
             setTimeout( () => {
                 resolve(cruises);
-            }, 500);
+            }, 1000);
         });
-        getData.then(res => setData (res));
-    }, [data])
-// Cuando dejo el espacio en blanco entre los corchetes de la 16, me marca como que está mal, pero sí funciona correctamente. Queda más prolijo trayendo 'data' nuevamente.
+        if (categoryId) {
+            getData.then(res => setData (res.filter(cruises => cruises.category === categoryId)));
+        } else {
+            getData.then(res => setData (res));
+        }
+    }, [categoryId])
 
     return (
         <>

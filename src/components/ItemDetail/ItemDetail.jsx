@@ -1,19 +1,26 @@
-import React from "react";
+import React, {useState} from "react";
+import { Link } from "react-router-dom";
 import ItemCount from "../ItemCount/ItemCounter";
 
 export function ItemDetail (cruises) {
 
+    const [addToCart, setAddToCart] = useState(false);
+
     function onAdd (quantity) {
-        if (quantity >= 5) {
-            alert("Do you need to book for more than 4 passengers? Please send us an e-mail to bookings@atlascruzer.com")
-        }
-        else if (quantity === 1) {
-            alert(`You have booked for ${quantity} passenger to travel.`); 
-        }
-        else {
-            alert(`You have booked for ${quantity} passenger(s) to travel.`);
-        }
+        setAddToCart(true);
     }
+
+    // function onAdd (quantity) {
+    //     if (quantity >= 5) {
+    //         alert("Do you need to book for more than 4 passengers? Please send us an e-mail to bookings@atlascruzer.com")
+    //     }
+    //     else if (quantity === 1) {
+    //         alert(`You have booked for ${quantity} passenger to travel.`); 
+    //     }
+    //     else {
+    //         alert(`You have booked for ${quantity} passenger(s) to travel.`);
+    //     }
+    // }
 
     return (
         <div className="container-xxl">
@@ -23,7 +30,10 @@ export function ItemDetail (cruises) {
                 <p className="col-8 text-justify m-auto mt-3 roboto-font">{cruises.description}</p>
                 <img className="col-8 m-auto mt-3" src={cruises.image} alt={cruises.alt} />
                 <div className="col-3 m-auto mt-5 mb-4">
-                    <ItemCount initial={1} stock={5} onAdd={onAdd} />
+                    {
+                        addToCart ? <Link to='/cart'>End Booking</Link>
+                        : <ItemCount initial={2} stock={5} onAdd={onAdd} />
+                    }
                 </div>
             </article>
         </div>

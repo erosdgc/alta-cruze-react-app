@@ -19,9 +19,10 @@ export default function App () {
       <Routes> 
           <Route path='/' element={<Main/>}/>
           <Route path='/cruises' element={<ItemListContainer/>}/>
-          <Route path='/category' element={<ItemListContainer/>}/>
+          <Route path='/category/:categoryId' element={<ItemListContainer/>}/>
           <Route path='/check-in' element={<CartWidget/>}/>
           <Route path='/item/:id' element={<ItemDetailContainer/>}/>
+          <Route path='/cart' element={<CartWidget />}></Route>
           {/* <Route path='/destinations' element={<Destinations/>}/>
           <Route path='/antilles' element={<Antilles/>}/>
           <Route path='/black-sea' element={<Black-Sea/>}/>

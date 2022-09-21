@@ -18,7 +18,8 @@ const cruises = [
         date: "December 3, 2022.",
         duration: 5,
         price: 600,
-        stock: 4
+        stock: 4,
+        // category: 'new-year',
     },
     {
         id: 2,
@@ -30,7 +31,8 @@ const cruises = [
         date: "July 3, 2022.",
         duration: 6,
         price: 700,
-        stock: 4},
+        stock: 4
+    },
     {
         id: 3,
         cruise: "Oceania",
@@ -53,7 +55,8 @@ const cruises = [
         date: "December 20, 2022.",
         duration: 9,
         price: 1050,
-        stock: 4},
+        stock: 4
+    },
     {
         id: 5,
         cruise: "Caribbean",

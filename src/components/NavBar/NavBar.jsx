@@ -27,103 +27,103 @@ const NavBar = () => {
                         <div className="collapse navbar-collapse bg-blur" id="navbarNavDropdown">
                             <ul className="navbar-nav">
                                 <li className="nav-item dropdown nav-link">
-                                   <NavLink className="nav-link dropdown-toggle link-header" to="/items" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Destinations</NavLink>
+                                   <NavLink className="nav-link dropdown-toggle link-header" to="/destinations" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Destinations</NavLink>
                                     <ul className="dropdown-menu dropdown-menu-light rounded-0 border-0 bg-tr fade-down shadow-sm bg-blur" aria-labelledby="navbarLightDropdownMenuLink">
                                         <li>
-                                           <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/south-america">South America <span><i className="fa-solid fa-chevron-right"></i></span>
+                                           <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/destinations/south-america">South America <span><i className="fa-solid fa-chevron-right"></i></span>
                                            </NavLink>
                                             <ul className="submenu dropdown-menu-light rounded-0 border-0 bg-tr fade-down shadow-sm bg-blur list-unstyled">
                                                 <li>
-                                                   <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/2022">2022 </NavLink>
+                                                   <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/destinations/south-america/2022">2022 </NavLink>
                                                 </li>
                                                 <li>
-                                                   <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="new-year">New Year </NavLink>
+                                                   <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/destinations/south-america/new-year">New Year </NavLink>
                                                 </li>
                                                 <li>
-                                                   <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/2023">2023 </NavLink>
+                                                   <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/destinations/south-america/2023">2023 </NavLink>
                                                 </li>
                                             </ul>
                                         </li>
                                         <li>
-                                           <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/black-sea">Black Sea <span><i className="fa-solid fa-chevron-right"></i></span>
+                                           <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/destinations/black-sea">Black Sea <span><i className="fa-solid fa-chevron-right"></i></span>
                                            </NavLink>
                                             <ul className="submenu dropdown-menu-light rounded-0 border-0 bg-tr fade-down shadow-sm bg-blur list-unstyled">
                                                 <li>
-                                                   <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/2023">2023</NavLink>
+                                                   <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/destinations/black-sea/2023">2023</NavLink>
                                                 </li>
                                             </ul>
                                         </li>
                                         <li>
-                                           <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/oceania">Oceania <span><i className="fa-solid fa-chevron-right"></i></span>
+                                           <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/destinations/oceania">Oceania <span><i className="fa-solid fa-chevron-right"></i></span>
                                            </NavLink>
                                             <ul className="submenu dropdown-menu-light rounded-0 border-0 bg-tr fade-down shadow-sm bg-blur list-unstyled">
                                                 <li>
-                                                   <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/2022">2022</NavLink>
+                                                   <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/destinations/oceania/2022">2022</NavLink>
                                                 </li>
                                                 <li>
-                                                   <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/new-year">New Year</NavLink>
+                                                   <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/destinations/oceania/new-year">New Year</NavLink>
                                                 </li>
                                                 <li>
-                                                   <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/2023">2023</NavLink>
+                                                   <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/destinations/oceania/2023">2023</NavLink>
                                                 </li>
                                             </ul>
                                         </li>
                                         <li>
-                                           <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/southern-africa">Southern Africa <span><i className="fa-solid fa-chevron-right"></i></span>
+                                           <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/destinations/southern-africa">Southern Africa <span><i className="fa-solid fa-chevron-right"></i></span>
                                            </NavLink>
                                             <ul className="submenu dropdown-menu-light rounded-0 border-0 bg-tr fade-down shadow-sm bg-blur list-unstyled">
                                                 <li>
-                                                   <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/2022">2022</NavLink>
+                                                   <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/destinations/southern-africa/2022">2022</NavLink>
                                                 </li>
                                                 <li>
-                                                   <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/new-year">New Year</NavLink>
+                                                   <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/destinations/southern-africa/new-year">New Year</NavLink>
                                                 </li>
                                                 <li>
-                                                   <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/2023">2023</NavLink>
+                                                   <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/destinations/southern-africa/2023">2023</NavLink>
                                                 </li>
                                             </ul>
                                         </li>
                                         <li>
-                                           <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/caribbean">Caribbean <span><i className="fa-solid fa-chevron-right"></i></span>
+                                           <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/destinations/caribbean">Caribbean <span><i className="fa-solid fa-chevron-right"></i></span>
                                            </NavLink>
                                             <ul className="submenu dropdown-menu-light rounded-0 border-0 bg-tr fade-down shadow-sm bg-blur list-unstyled">
                                                 <li>
-                                                   <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/2022">2022</NavLink>
+                                                   <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/destinations/caribbean/2022">2022</NavLink>
                                                 </li>
                                                 <li>
-                                                   <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/new-year">New Year</NavLink>
+                                                   <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/destinations/caribbean/new-year">New Year</NavLink>
                                                 </li>
                                                 <li>
-                                                   <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/2023">2023</NavLink>
+                                                   <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/destinations/caribbean/2023">2023</NavLink>
                                                 </li>
                                             </ul>
                                         </li>
                                         <li>
-                                           <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/mediterranean-sea">Mediterranean Sea <span><i className="fa-solid fa-chevron-right"></i></span>
+                                           <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/destinations/mediterranean-sea">Mediterranean Sea <span><i className="fa-solid fa-chevron-right"></i></span>
                                            </NavLink>
                                             <ul className="submenu dropdown-menu-light rounded-0 border-0 bg-tr fade-down shadow-sm bg-blur list-unstyled">
-                                                <li><NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/2022">2022</NavLink></li>
-                                                <li><NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/2023">2023</NavLink></li>
+                                                <li><NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/destinations/mediterranean-sea/2022">2022</NavLink></li>
+                                                <li><NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/destinations/mediterranean-sea/2023">2023</NavLink></li>
                                             </ul>
                                         </li>
-                                        <li><NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/antartic">Antartic <span><i className="fa-solid fa-chevron-right"></i></span></NavLink>
+                                        <li><NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/destinations/antartic">Antartic <span><i className="fa-solid fa-chevron-right"></i></span></NavLink>
                                             <ul className="submenu dropdown-menu-light rounded-0 border-0 bg-tr fade-down shadow-sm bg-blur list-unstyled">
                                                 <li>
-                                                    <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/2022">2022</NavLink>
+                                                    <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/destinations/antartic/2022">2022</NavLink>
                                                 </li>
                                                 <li>
-                                                    <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/new-year">New Year</NavLink>
+                                                    <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/destinations/antartic/new-year">New Year</NavLink>
                                                 </li>
                                                 <li>
-                                                    <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/2023">2023</NavLink>
+                                                    <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/destinations/antartic/2023">2023</NavLink>
                                                 </li>
                                             </ul>
                                         </li>
                                         <li>
-                                            <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/central-pacific">Central Pacific <span><i className="fa-solid fa-chevron-right"></i></span></NavLink>
+                                            <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/destinations/central-pacific">Central Pacific <span><i className="fa-solid fa-chevron-right"></i></span></NavLink>
                                             <ul className="submenu dropdown-menu-light rounded-0 border-0 bg-tr fade-down shadow-sm bg-blur list-unstyled">
-                                                <li><NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/2022">2022</NavLink></li>
-                                                <li><NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/2023">2023</NavLink></li>
+                                                <li><NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/destinations/central-pacific/2022">2022</NavLink></li>
+                                                <li><NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/destinations/central-pacific/2023">2023</NavLink></li>
                                             </ul>
                                         </li>
                                     </ul>
@@ -133,29 +133,29 @@ const NavBar = () => {
                                    </NavLink>
                                     <ul className="dropdown-menu dropdown-menu-light rounded-0 border-0 bg-tr fade-down shadow-sm bg-blur" aria-labelledby="navbarDropdownMenuLink">
                                         <li>
-                                           <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/on-board">On Board</NavLink>
+                                           <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/experience/on-board">On Board</NavLink>
                                         </li>
                                         <li>
-                                           <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/ashore">Ashore</NavLink>
+                                           <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/experience/ashore">Ashore</NavLink>
                                         </li>
                                         <li>
-                                           <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/membership">Membership <span><i className="fa-solid fa-chevron-right"></i></span></NavLink>
+                                           <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/experience/membership">Membership <span><i className="fa-solid fa-chevron-right"></i></span></NavLink>
                                             <ul className="submenu dropdown-menu-light rounded-0 border-0 bg-tr fade-down shadow-sm bg-blur list-unstyled">
                                                 <li>
-                                                   <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/register">Suscribe Now</NavLink>
+                                                   <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/experience/membership/register">Suscribe Now</NavLink>
                                                 </li>
                                             </ul>
                                         </li>
                                     </ul>
                                 </li>
                                 <li className="nav-item dropdown nav-link">
-                                   <NavLink className="nav-link dropdown-toggle link-header" to="/offers" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Opportunities</NavLink>
+                                   <NavLink className="nav-link dropdown-toggle link-header" to="/category/offers" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Offers</NavLink>
                                     <ul className="dropdown-menu dropdown-menu-light rounded-0 border-0 bg-tr fade-down shadow-sm bg-blur" aria-labelledby="navbarDropdownMenuLink">
-                                        <li><NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/special_offers">Special Offers</NavLink></li>
-                                        <li><NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/thematic_cruises">Thematic Cruises</NavLink></li>
-                                        <li><NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/new-year">New Year</NavLink></li>
-                                        <li><NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/upcoming">22/23</NavLink></li>
-                                        <li><NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/opportunities">Other Offers</NavLink></li>
+                                        <li><NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/category/offers/special-offers">Special Offers</NavLink></li>
+                                        <li><NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/category/offers/thematic-cruises">Thematic Cruises</NavLink></li>
+                                        <li><NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/category/offers/new-year">New Year</NavLink></li>
+                                        <li><NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/category/offers/upcoming">22/23</NavLink></li>
+                                        <li><NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/category/offers/other">Other Offers</NavLink></li>
                                     </ul>
                                 </li>
                                 <li className="nav-item dropdown nav-link">

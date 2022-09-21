@@ -1,18 +1,23 @@
 import React, { useState, useEffect } from "react";
-import { getItemById } from "../ItemFetch/customFetch";
+import { getData} from "../ItemFetch/customFetch";
 import { useParams } from "react-router-dom";
 import { ItemDetail } from "../ItemDetail/ItemDetail";
+// import cruises from "../ItemFetch/Origin";
 
 export function ItemDetailContainer () {
-    const [itemDetail, setToDoDetail] = useState({})
+  
+  const [itemDetail, setData] = useState({})
 
   const {id} = useParams() 
 
     useEffect(()=> {
-        getItemById(parseInt(id)).then(response => {
-            setToDoDetail(response)
+        getData(parseInt(id)).then(response => {
+            setData(response)
         })
     }, [id])
+
+    // getData.then(res => setData (res.find(cruises.id === parseInt(id))));
+
   return (
     <div className='container-fluid'>
         <ItemDetail {...itemDetail}/>

@@ -8,7 +8,7 @@ export function customFetch () {
     })
 }
 
-export function getItemById (id) {
+export function getData (id) {
     return new Promise (resolve => {
         setTimeout(() => {
             resolve(cruises.find(prod => prod.id === id))
