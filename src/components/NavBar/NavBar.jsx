@@ -2,158 +2,212 @@ import React from "react";
 // import "./NavBar.css";
 import logo from "../../assets/images/icon.png";
 import search from "../../assets/images/loupe.png";
-import CartWidget from "./CartWidget";
-import ItemCount from "../Items/ItemCount";
+import CartWidget from "../CartWidget/CartWidget";
+import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
 
     return (
         <div className="bg-blur">
-            <header className="navbar navbar-expand-lg">
+            <header className="navbar navbar-expand-xl">
                 <nav className="container-fluid">
                     <div className="logo-image px-4 d-flex flex-row align-items-center justify-content-center px-5">
-                        <a aria-current="page" href="#">
+                       <NavLink aria-current="page" to="/">
                             <img src={logo} alt="Atlas Cruzer - Cruises Around The World" />
-                        </a>
-                        <h1 className="px-4 roboto-font position-fixed text-shadow"> <a role="button">ΛTLΛS <span>CRUZER</span></a></h1>
+                       </NavLink>
+                        <h1 className="px-4 roboto-font position-fixed text-shadow">
+                            <NavLink className="text-reset text-decoration-none" to="/" role="button">ΛTLΛS <span>CRUZER</span>
+                            </NavLink>
+                        </h1>
                     </div>
                     <div className="dropdowns ms-auto">
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
+                        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                            <span className="navbar-toggler-icon"></span>
                         </button>
-                        <div class="collapse navbar-collapse bg-blur" id="navbarNavDropdown">
+                        <div className="collapse navbar-collapse bg-blur" id="navbarNavDropdown">
                             <ul className="navbar-nav">
                                 <li className="nav-item dropdown nav-link">
-                                    <a className="nav-link dropdown-toggle link-header" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Destinations</a>
-                                    <ul class="dropdown-menu dropdown-menu-light rounded-0 border-0 bg-tr fade-down shadow-sm bg-blur" aria-labelledby="navbarLightDropdownMenuLink">
+                                   <NavLink className="nav-link dropdown-toggle link-header" to="/destinations" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Destinations</NavLink>
+                                    <ul className="dropdown-menu dropdown-menu-light rounded-0 border-0 bg-tr fade-down shadow-sm bg-blur" aria-labelledby="navbarLightDropdownMenuLink">
                                         <li>
-                                            <a class="dropdown-item roboto-font d-flex justify-content-between" href="../components/Destinations/South-America.jsx">South America <span><i class="fa-solid fa-chevron-right"></i></span></a>
-                                            <ul class="submenu dropdown-menu-light rounded-0 border-0 bg-tr fade-down shadow-sm bg-blur list-unstyled">
-                                                <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">2022</a></li>
-                                                <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">New Year</a></li>
-                                                <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">2023</a></li>
+                                           <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/destinations/south-america">South America <span><i className="fa-solid fa-chevron-right"></i></span>
+                                           </NavLink>
+                                            <ul className="submenu dropdown-menu-light rounded-0 border-0 bg-tr fade-down shadow-sm bg-blur list-unstyled">
+                                                <li>
+                                                   <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/destinations/south-america/2022">2022 </NavLink>
+                                                </li>
+                                                <li>
+                                                   <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/destinations/south-america/new-year">New Year </NavLink>
+                                                </li>
+                                                <li>
+                                                   <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/destinations/south-america/2023">2023 </NavLink>
+                                                </li>
                                             </ul>
                                         </li>
-                                        <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="../components/Destinations/Black-Sea.jsx">Black Sea <span><i class="fa-solid fa-chevron-right"></i></span></a>
-                                            <ul class="submenu dropdown-menu-light rounded-0 border-0 bg-tr fade-down shadow-sm bg-blur list-unstyled">
-                                                <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">2023</a></li>
+                                        <li>
+                                           <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/destinations/black-sea">Black Sea <span><i className="fa-solid fa-chevron-right"></i></span>
+                                           </NavLink>
+                                            <ul className="submenu dropdown-menu-light rounded-0 border-0 bg-tr fade-down shadow-sm bg-blur list-unstyled">
+                                                <li>
+                                                   <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/destinations/black-sea/2023">2023</NavLink>
+                                                </li>
                                             </ul>
                                         </li>
-                                        <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="../components/Destinations/Oceania.jsx">Oceania <span><i class="fa-solid fa-chevron-right"></i></span></a>
-                                            <ul class="submenu dropdown-menu-light rounded-0 border-0 bg-tr fade-down shadow-sm bg-blur list-unstyled">
-                                                <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">2022</a></li>
-                                                <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">New Year</a></li>
-                                                <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">2023</a></li>
+                                        <li>
+                                           <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/destinations/oceania">Oceania <span><i className="fa-solid fa-chevron-right"></i></span>
+                                           </NavLink>
+                                            <ul className="submenu dropdown-menu-light rounded-0 border-0 bg-tr fade-down shadow-sm bg-blur list-unstyled">
+                                                <li>
+                                                   <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/destinations/oceania/2022">2022</NavLink>
+                                                </li>
+                                                <li>
+                                                   <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/destinations/oceania/new-year">New Year</NavLink>
+                                                </li>
+                                                <li>
+                                                   <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/destinations/oceania/2023">2023</NavLink>
+                                                </li>
                                             </ul>
                                         </li>
-                                        <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="../components/Destinations/Southern-Africa.jsx">Southern Africa <span><i class="fa-solid fa-chevron-right"></i></span></a>
-                                            <ul class="submenu dropdown-menu-light rounded-0 border-0 bg-tr fade-down shadow-sm bg-blur list-unstyled">
-                                                <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">2022</a></li>
-                                                <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">New Year</a></li>
-                                                <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">2023</a></li>
+                                        <li>
+                                           <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/destinations/southern-africa">Southern Africa <span><i className="fa-solid fa-chevron-right"></i></span>
+                                           </NavLink>
+                                            <ul className="submenu dropdown-menu-light rounded-0 border-0 bg-tr fade-down shadow-sm bg-blur list-unstyled">
+                                                <li>
+                                                   <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/destinations/southern-africa/2022">2022</NavLink>
+                                                </li>
+                                                <li>
+                                                   <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/destinations/southern-africa/new-year">New Year</NavLink>
+                                                </li>
+                                                <li>
+                                                   <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/destinations/southern-africa/2023">2023</NavLink>
+                                                </li>
                                             </ul>
                                         </li>
-                                        <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="../components/Destinations/Caribbean.jsx">Caribbean <span><i class="fa-solid fa-chevron-right"></i></span></a>
-                                            <ul class="submenu dropdown-menu-light rounded-0 border-0 bg-tr fade-down shadow-sm bg-blur list-unstyled">
-                                                <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">2022</a></li>
-                                                <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">New Year</a></li>
-                                                <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">2023</a></li>
+                                        <li>
+                                           <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/destinations/caribbean">Caribbean <span><i className="fa-solid fa-chevron-right"></i></span>
+                                           </NavLink>
+                                            <ul className="submenu dropdown-menu-light rounded-0 border-0 bg-tr fade-down shadow-sm bg-blur list-unstyled">
+                                                <li>
+                                                   <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/destinations/caribbean/2022">2022</NavLink>
+                                                </li>
+                                                <li>
+                                                   <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/destinations/caribbean/new-year">New Year</NavLink>
+                                                </li>
+                                                <li>
+                                                   <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/destinations/caribbean/2023">2023</NavLink>
+                                                </li>
                                             </ul>
                                         </li>
-                                        <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="../components/Destinations/Mediterranean-Sea.jsx">Mediterranean Sea <span><i class="fa-solid fa-chevron-right"></i></span></a>
-                                            <ul class="submenu dropdown-menu-light rounded-0 border-0 bg-tr fade-down shadow-sm bg-blur list-unstyled">
-                                                <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">2022</a></li>
-                                                <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">2023</a></li>
+                                        <li>
+                                           <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/destinations/mediterranean-sea">Mediterranean Sea <span><i className="fa-solid fa-chevron-right"></i></span>
+                                           </NavLink>
+                                            <ul className="submenu dropdown-menu-light rounded-0 border-0 bg-tr fade-down shadow-sm bg-blur list-unstyled">
+                                                <li><NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/destinations/mediterranean-sea/2022">2022</NavLink></li>
+                                                <li><NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/destinations/mediterranean-sea/2023">2023</NavLink></li>
                                             </ul>
                                         </li>
-                                        <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="../components/Destinations/Antartic.jsx">Antartic <span><i class="fa-solid fa-chevron-right"></i></span></a>
-                                            <ul class="submenu dropdown-menu-light rounded-0 border-0 bg-tr fade-down shadow-sm bg-blur list-unstyled">
-                                                <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">2022</a></li>
-                                                <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">New Year</a></li>
-                                                <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">2023</a></li>
+                                        <li><NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/destinations/antartic">Antartic <span><i className="fa-solid fa-chevron-right"></i></span></NavLink>
+                                            <ul className="submenu dropdown-menu-light rounded-0 border-0 bg-tr fade-down shadow-sm bg-blur list-unstyled">
+                                                <li>
+                                                    <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/destinations/antartic/2022">2022</NavLink>
+                                                </li>
+                                                <li>
+                                                    <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/destinations/antartic/new-year">New Year</NavLink>
+                                                </li>
+                                                <li>
+                                                    <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/destinations/antartic/2023">2023</NavLink>
+                                                </li>
                                             </ul>
                                         </li>
-                                        <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="../components/Destinations/Central-Pacific.jsx">Central Pacific <span><i class="fa-solid fa-chevron-right"></i></span></a>
-                                            <ul class="submenu dropdown-menu-light rounded-0 border-0 bg-tr fade-down shadow-sm bg-blur list-unstyled">
-                                                <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">2022</a></li>
-                                                <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">2023</a></li>
+                                        <li>
+                                            <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/destinations/central-pacific">Central Pacific <span><i className="fa-solid fa-chevron-right"></i></span></NavLink>
+                                            <ul className="submenu dropdown-menu-light rounded-0 border-0 bg-tr fade-down shadow-sm bg-blur list-unstyled">
+                                                <li><NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/destinations/central-pacific/2022">2022</NavLink></li>
+                                                <li><NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/destinations/central-pacific/2023">2023</NavLink></li>
                                             </ul>
                                         </li>
                                     </ul>
                                 </li>
                                 <li className="nav-item dropdown nav-link">
-                                    <a className="nav-link dropdown-toggle link-header" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Experience</a>
-                                    <ul class="dropdown-menu dropdown-menu-light rounded-0 border-0 bg-tr fade-down shadow-sm bg-blur" aria-labelledby="navbarDropdownMenuLink">
-                                        <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">On Board</a></li>
-                                        <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">Ashore</a></li>
-                                        <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">Membership <span><i class="fa-solid fa-chevron-right"></i></span></a>
-                                            <ul class="submenu dropdown-menu-light rounded-0 border-0 bg-tr fade-down shadow-sm bg-blur list-unstyled">
-                                                <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">Suscribe Now</a></li>
+                                   <NavLink className="nav-link dropdown-toggle link-header" to="/experience" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Experience
+                                   </NavLink>
+                                    <ul className="dropdown-menu dropdown-menu-light rounded-0 border-0 bg-tr fade-down shadow-sm bg-blur" aria-labelledby="navbarDropdownMenuLink">
+                                        <li>
+                                           <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/experience/on-board">On Board</NavLink>
+                                        </li>
+                                        <li>
+                                           <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/experience/ashore">Ashore</NavLink>
+                                        </li>
+                                        <li>
+                                           <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/experience/membership">Membership <span><i className="fa-solid fa-chevron-right"></i></span></NavLink>
+                                            <ul className="submenu dropdown-menu-light rounded-0 border-0 bg-tr fade-down shadow-sm bg-blur list-unstyled">
+                                                <li>
+                                                   <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/experience/membership/register">Suscribe Now</NavLink>
+                                                </li>
                                             </ul>
                                         </li>
                                     </ul>
                                 </li>
                                 <li className="nav-item dropdown nav-link">
-                                    <a className="nav-link dropdown-toggle link-header" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Offers</a>
-                                    <ul class="dropdown-menu dropdown-menu-light rounded-0 border-0 bg-tr fade-down shadow-sm bg-blur" aria-labelledby="navbarDropdownMenuLink">
-                                        <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">Membership</a></li>
-                                        <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">Special Offers</a></li>
-                                        <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">Thematic Cruises</a></li>
-                                        <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">New Year</a></li>
-                                        <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">22/23</a></li>
-                                        <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">Other Offers</a></li>
+                                   <NavLink className="nav-link dropdown-toggle link-header" to="/category/offers" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Offers</NavLink>
+                                    <ul className="dropdown-menu dropdown-menu-light rounded-0 border-0 bg-tr fade-down shadow-sm bg-blur" aria-labelledby="navbarDropdownMenuLink">
+                                        <li><NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/category/offers/special-offers">Special Offers</NavLink></li>
+                                        <li><NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/category/offers/thematic-cruises">Thematic Cruises</NavLink></li>
+                                        <li><NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/category/offers/new-year">New Year</NavLink></li>
+                                        <li><NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/category/offers/upcoming">22/23</NavLink></li>
+                                        <li><NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/category/offers/other">Other Offers</NavLink></li>
                                     </ul>
                                 </li>
                                 <li className="nav-item dropdown nav-link">
-                                    <a className="nav-link dropdown-toggle link-header" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Ships</a>
-                                    <ul class="dropdown-menu dropdown-menu-light rounded-0 border-0 bg-tr fade-down shadow-sm bg-blur" aria-labelledby="navbarDropdownMenuLink">
-                                        <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">Contessa</a></li>
-                                        <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">Dreamweaver</a></li>
-                                        <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">Jolly Roger</a></li>
-                                        <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">Expedition</a></li>
-                                        <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">Beowulf</a></li>
-                                        <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">Adventure I</a></li>
-                                        <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">Cleopatra</a></li>
-                                        <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">Silhouette</a></li>
+                                   <NavLink className="nav-link dropdown-toggle link-header" to="/ships" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Ships</NavLink>
+                                    <ul className="dropdown-menu dropdown-menu-light rounded-0 border-0 bg-tr fade-down shadow-sm bg-blur" aria-labelledby="navbarDropdownMenuLink">
+                                        <li><NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/contessa">Contessa</NavLink></li>
+                                        <li><NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/dreamweaver">Dreamweaver</NavLink></li>
+                                        <li><NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/jolly_roger">Jolly Roger</NavLink></li>
+                                        <li><NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/expedition">Expedition</NavLink></li>
+                                        <li><NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/beowulf">Beowulf</NavLink></li>
+                                        <li><NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/adventure_i">Adventure I</NavLink></li>
+                                        <li><NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/cleopatra">Cleopatra</NavLink></li>
+                                        <li><NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/silhouette">Silhouette</NavLink></li>
                                     </ul>
                                 </li>
                                 <li className="nav-item dropdown nav-link">
-                                    <a className="nav-link dropdown-toggle link-header" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Contact Us</a>
-                                    <ul class="dropdown-menu dropdown-menu-light rounded-0 border-0 bg-tr fade-down shadow-sm bg-blur" aria-labelledby="navbarDropdownMenuLink">
-                                        <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">Advisors</a></li>
-                                        <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">Phone Number</a></li>
-                                        <li><a class="dropdown-item roboto-font d-flex justify-content-between" href="#">E-Mail</a></li>
+                                   <NavLink className="nav-link dropdown-toggle link-header" to="/contact" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Contact Us</NavLink>
+                                    <ul className="dropdown-menu dropdown-menu-light rounded-0 border-0 bg-tr fade-down shadow-sm bg-blur" aria-labelledby="navbarDropdownMenuLink">
+                                        <li><NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/contact">Advisors</NavLink></li>
+                                        <li><NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/contact">Phone Number</NavLink></li>
+                                        <li><NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/contact">E-Mail</NavLink></li>
                                     </ul>
                                 </li>
                                 <li className="nav-item nav-link">
-                                    <a className="nav-link link-header text-nowrap" href="#">About Us</a>
+                                   <NavLink className="nav-link link-header text-nowrap" to="/about">About Us</NavLink>
                                 </li>
                             </ul>
                             <div className="bg-blur px-3">
                                 <ul className="navbar-nav">
                                     <li className="nav-item nav-link">
-                                        <a className="nav-link link-icon" href="#"><img className="search" src={search} alt="Search button" /></a>
+                                       <NavLink className="nav-link link-icon" to="/search"><img className="search" src={search} alt="Search button" /></NavLink>
                                     </li>
                                     <li className="nav-item dropdown nav-link">
-                                        <a className="nav-link dropdown-toggle link-icon" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                       <NavLink className="nav-link dropdown-toggle link-icon" to="/account" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                             <CartWidget />
-                                        </a>
+                                       </NavLink>
                                     </li>
                                 </ul>
                             </div>
                             <div className="nav-brands px-3">
                                 <ul className="navbar-nav social-media">
                                     <li className="nav-item nav-link">
-                                        <a className="nav-link link-icon" href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                                       <a className="nav-link link-icon" href="https://www.facebook.com"><i className="fa-brands fa-square-facebook"></i></a>
                                     </li>
                                     <li className="nav-item nav-link">
-                                        <a className="nav-link link-icon" href="#"><i class="fa-brands fa-instagram"></i></a>
+                                       <a className="nav-link link-icon" href="https://www.instagram.com"><i className="fa-brands fa-instagram"></i></a>
                                     </li>
                                     <li className="nav-item nav-link">
-                                        <a className="nav-link link-icon" href="#"><i class="fa-brands fa-twitter"></i></a>
+                                       <a className="nav-link link-icon" href="https://www.twitter.com"><i className="fa-brands fa-twitter"></i></a>
                                     </li>
                                     <li className="nav-item nav-link">
-                                        <a className="nav-link link-icon" href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                                       <a className="nav-link link-icon" href="https://www.linkedin.com/in/erosdavidgomezcentofanti/"><i className="fa-brands fa-linkedin-in"></i></a>
                                     </li>
                                 </ul>
                             </div>
