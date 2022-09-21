@@ -1,6 +1,8 @@
+// import './ItemDetail.css';
 import React, {useState} from "react";
-import { Link } from "react-router-dom";
+import { useCartContext } from "../../context/CartContext";
 import ItemCount from "../ItemCount/ItemCounter";
+import { Link } from "react-router-dom";
 
 export function ItemDetail (cruises) {
 
