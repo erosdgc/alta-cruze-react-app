@@ -11,7 +11,7 @@ const NavBar = () => {
         <div className="bg-blur">
             <header className="navbar navbar-expand-xl">
                 <nav className="container-fluid">
-                    <div className="logo-image px-4 d-flex flex-row align-items-center justify-content-center px-5">
+                    <div className="logo-image px-4 d-flex flex-row align-items-center justify-content-center ms-lg-5 ms-sm-5 ms-4">
                        <NavLink aria-current="page" to="/">
                             <img src={logo} alt="Atlas Cruzer - Cruises Around The World" />
                        </NavLink>
@@ -21,13 +21,13 @@ const NavBar = () => {
                         </h1>
                     </div>
                     <div className="dropdowns ms-auto">
-                        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <button className="navbar-toggler me-lg-5 me-sm-5 me-4 border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                             <span className="navbar-toggler-icon"></span>
                         </button>
                         <div className="collapse navbar-collapse bg-blur" id="navbarNavDropdown">
                             <ul className="navbar-nav">
                                 <li className="nav-item dropdown nav-link">
-                                   <NavLink className="nav-link dropdown-toggle link-header" to="/destinations" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Destinations</NavLink>
+                                   <NavLink className="nav-link dropdown-toggle link-header px-1 me-2 me-xxl-4" to="/destinations" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Destinations</NavLink>
                                     <ul className="dropdown-menu dropdown-menu-light rounded-0 border-0 bg-tr fade-down shadow-sm bg-blur" aria-labelledby="navbarLightDropdownMenuLink">
                                         <li>
                                            <NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/destinations/south-america">South America <span><i className="fa-solid fa-chevron-right"></i></span>
@@ -129,7 +129,7 @@ const NavBar = () => {
                                     </ul>
                                 </li>
                                 <li className="nav-item dropdown nav-link">
-                                   <NavLink className="nav-link dropdown-toggle link-header" to="/experience" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Experience
+                                   <NavLink className="nav-link dropdown-toggle link-header px-1 me-2 me-xxl-4" to="/experience" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Experience
                                    </NavLink>
                                     <ul className="dropdown-menu dropdown-menu-light rounded-0 border-0 bg-tr fade-down shadow-sm bg-blur" aria-labelledby="navbarDropdownMenuLink">
                                         <li>
@@ -149,7 +149,7 @@ const NavBar = () => {
                                     </ul>
                                 </li>
                                 <li className="nav-item dropdown nav-link">
-                                   <NavLink className="nav-link dropdown-toggle link-header" to="/category/offers" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Offers</NavLink>
+                                   <NavLink className="nav-link dropdown-toggle link-header px-1 me-2 me-xxl-4" to="/category/offers" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Offers</NavLink>
                                     <ul className="dropdown-menu dropdown-menu-light rounded-0 border-0 bg-tr fade-down shadow-sm bg-blur" aria-labelledby="navbarDropdownMenuLink">
                                         <li><NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/category/offers/special-offers">Special Offers</NavLink></li>
                                         <li><NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/category/offers/thematic-cruises">Thematic Cruises</NavLink></li>
@@ -159,7 +159,7 @@ const NavBar = () => {
                                     </ul>
                                 </li>
                                 <li className="nav-item dropdown nav-link">
-                                   <NavLink className="nav-link dropdown-toggle link-header" to="/ships" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Ships</NavLink>
+                                   <NavLink className="nav-link dropdown-toggle link-header px-1 me-2 me-xxl-4" to="/ships" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Ships</NavLink>
                                     <ul className="dropdown-menu dropdown-menu-light rounded-0 border-0 bg-tr fade-down shadow-sm bg-blur" aria-labelledby="navbarDropdownMenuLink">
                                         <li><NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/contessa">Contessa</NavLink></li>
                                         <li><NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/dreamweaver">Dreamweaver</NavLink></li>
@@ -172,7 +172,7 @@ const NavBar = () => {
                                     </ul>
                                 </li>
                                 <li className="nav-item dropdown nav-link">
-                                   <NavLink className="nav-link dropdown-toggle link-header" to="/contact" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Contact Us</NavLink>
+                                   <NavLink className="nav-link dropdown-toggle link-header px-1 me-2 me-xxl-4" to="/contact" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Contact Us</NavLink>
                                     <ul className="dropdown-menu dropdown-menu-light rounded-0 border-0 bg-tr fade-down shadow-sm bg-blur" aria-labelledby="navbarDropdownMenuLink">
                                         <li><NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/contact">Advisors</NavLink></li>
                                         <li><NavLink className="dropdown-item roboto-font d-flex justify-content-between" to="/contact">Phone Number</NavLink></li>
@@ -180,7 +180,7 @@ const NavBar = () => {
                                     </ul>
                                 </li>
                                 <li className="nav-item nav-link">
-                                   <NavLink className="nav-link link-header text-nowrap" to="/about">About Us</NavLink>
+                                   <NavLink className="nav-link link-header text-nowrap px-1 me-2 me-xxl-4" to="/about">About Us</NavLink>
                                 </li>
                             </ul>
                             <div className="bg-blur px-3">

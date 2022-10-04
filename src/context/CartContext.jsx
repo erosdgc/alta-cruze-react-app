@@ -1,37 +1,103 @@
-import React, {useState, useContext} from 'react'
-// import cruises from '../components/ItemFetch/Origin';
+import React, {useState, createContext} from 'react'
 
+export const CartContext = createContext();
 
-const CartContext = React.createContext([]);
+// export const useCartContext = () => useContext(CartContext);
 
-
-export const useCartContext = () => useContext(CartContext);
-
-
-function CartProvider( {children} ) {
+const CartProvider = ( props ) => {
+  console.log(props);
     const [cart, setCart] = useState([]);
 
+    const addToCart = (item, quantity) => {
+      const cruise = { ...item, quantity };
+      if (isInCart(cruise.id)) {
 
-    // const addItem = () => ;
+// Busco el cruise y le sumo la cantidad
+          addQuantity(cruise);
+      } else {
+          setCart([...cart, cruise]);
+      }
+      //spread operator -> ...
+      // const persona = {id: 1, nombre: 'eric'}
+      // ...persona --> id: 1, nombre: 'eric'
+      // const edad = {...persona, edad: 27}
+      //--> img: ';, price: 20
+  };
+
+  
+
+    // const addItem = (item, quantity) => {
+    //   if (isSelected(item.id)) {
+    //     setCart(cart.map(cruise => {
+    //       return cruise.id === item.id ? { ...cruise, quantity: cruise.quantity + quantity } : cruise
+    //     }));
+    //   }
+    // };
+
+    // const removeItemFromCart = (id) => setCart(cart.filter(cruise => cruise.id !== id));
 
 
-    const removeItem = (id) => setCart(cart.filter(product => product.id !== id));
+    const isInCart = (id) => {
+      return cart.some((prod) => prod.id === id);
+    };
+
+    const addQuantity = (cruise) => {
+      const cartUpdated = cart.map((cruiseInCart) => {
+          if (cruise.id === cruiseInCart.id) {
+              const cruiseUpdated = {
+                  ...cruiseInCart,
+                  quantity: cruise.quantity,
+              };
+              return cruiseUpdated;
+          } else {
+              return cruiseInCart;
+          }
+      });
+      setCart(cartUpdated);
+  };
+
+    // const isSelected = (id) => cart.find(cruise => cruise.id === id) ? true : false;
+
+    // Función para borrar todo el carrito
+    const deleteAll = () => {
+      setCart([]);
+    };
+
+    const totalUnities = () => {
+      const copy = [...cart];
+      let count = 0;
+      copy.forEach((cruise) => {
+          count = count + cruise.quantity;
+      });
+      return count;
+    };
+
+    // Función para eliminar un viaje.
+    const deleteOne = (id) => {
+      const filteredCruises = cart.filter((prod) => prod.id !== id);
+      setCart(filteredCruises);
+    };
 
 
-    const clear = () => setCart ([]);
+    // const clearCart = () => setCart ([]);
 
+    const nombre = 'Eros';
 
-    const isSelected = (id) => cart.find(cruises => cruises.id === id) ? true : false;
-    
+    const saludo = () => {
+        console.log(`Hola! ${nombre}`);
+    };
 
   return (
     <CartContext.Provider value={{
-        // addItem,
-        removeItem,
-        clear,
-        isSelected
+        cart,
+        saludo,
+        addToCart,
+        deleteAll,
+        totalUnities,
+        deleteOne
     }}>
-        {children}
+        {props.children}
+        <h1 className='display-2 text-center'>Context is working ✓</h1>
     </CartContext.Provider>
   )
 }

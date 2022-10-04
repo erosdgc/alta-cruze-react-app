@@ -24,6 +24,14 @@ html {
   font-family: 'Sora', sans-serif;
 }
 
+.text-justify {
+  text-align: justify;
+}
+
+.text-indent {
+  text-indent: 5px;
+}
+
 .bg-tr {
   background-color: hsla(0deg, 0%, 100%, 0.85) !important;
 }

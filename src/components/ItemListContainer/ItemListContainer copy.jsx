@@ -2,12 +2,12 @@ import React, {useState, useEffect, useContext} from "react";
 import ItemList from "../ItemList/ItemList";
 import { cruises } from "../ItemFetch/Origin";
 import { useParams } from "react-router-dom";
-import { CartContext } from "../../context/CartContext";
+import { useCartContext } from "../../context/CartContext";
 
 function ItemListContainer (props) {
     const [items, setItems] = useState([]);
     // const [setItems] = useState([]);
-    const values = useContext(CartContext);
+    const values = useContext(useCartContext);
     
     // Ejemplo con destructuring
     // const {valor1, valor3, valor5} = useContext(useCartContext);
@@ -16,22 +16,22 @@ function ItemListContainer (props) {
     const {categoryId} = useParams()
 
     useEffect( () => {
-        const getItems = new Promise (resolve => {
+        const setItems = new Promise (resolve => {
             setTimeout( () => {
                 resolve(cruises);
             }, 1000);
         });
         if (categoryId) {
-            getItems.then(resolve => setItems (resolve.filter(cruises => cruises.category === categoryId)));
+            setItems.then(res => setItems (res.filter(cruises => cruises.category === categoryId)));
         } else {
-            getItems.then(resolve => setItems (resolve));
+            setItems.then(res => setItems (res));
         }
-    }, [categoryId])
+    }, [categoryId, setItems])
 
     return (
         <>
             <div className="container-xxl">
-                <h1 className="text-center display-3 mt-5">Our Cruises</h1>
+                <h1 className="text-center mt-5">Our Cruises</h1>
                 <ItemList items={items}/>
             </div>
         </>

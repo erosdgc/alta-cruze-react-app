@@ -1,30 +1,20 @@
-import cruise1 from "../../assets/images/cards/south-america.jpg";
-import cruise2 from "../../assets/images/cards/black-sea.jpg";
-import cruise3 from "../../assets/images/cards/oceania.jpg";
-import cruise4 from "../../assets/images/cards/southern-africa.jpg";
-import cruise5 from "../../assets/images/cards/caribbean.jpg";
-import cruise6 from "../../assets/images/cards/mediterranean-sea.jpg";
-import cruise7 from "../../assets/images/cards/antartic.jpg";
-import cruise8 from "../../assets/images/cards/central-pacific.jpg";
-
-const cruises = [
+export const cruises = [
     {
         id: 1,
-        cruise: "South America",
-        image: cruise1,
+        title: "South America",
+        image: 'https://res.cloudinary.com/drulocuwt/image/upload/v1664591022/cards/south-america_ceyhdu.jpg',
         alt: "A beach on South America, Brazil",
         departure: "Buenos Aires, Argentina",
         description: 'South America is bounded by the Caribbean Sea to the northwest and north, the Atlantic Ocean to the northeast, east, and southeast, and the Pacific Ocean to the west.',
         date: "December 3, 2022.",
         duration: 5,
         price: 600,
-        stock: 4,
-        // category: 'new-year',
+        stock: 4
     },
     {
         id: 2,
-        cruise: "Black Sea",
-        image: cruise2,
+        title: "Black Sea",
+        image: 'https://res.cloudinary.com/drulocuwt/image/upload/v1664591021/cards/black-sea_wsmi0o.jpg',
         alt: "A beach on the Black Sea, Sochi", 
         departure: 'Sochi, Russia',
         description: 'The Black Sea is an inland sea between southeastern Europe and Anatolia that is actually a distant arm of the Atlantic Ocean by way of the Mediterranean Sea. It is connected to the Mediterranean by the Bosporus and the Sea of Marmara, and to the Sea of Azov by the Strait of Kerch.',
@@ -35,8 +25,8 @@ const cruises = [
     },
     {
         id: 3,
-        cruise: "Oceania",
-        image: cruise3,
+        title: "Oceania",
+        image: 'https://res.cloudinary.com/drulocuwt/image/upload/v1664591022/cards/oceania_zjk0pw.jpg',
         alt: "A beach on Oceania, Australia",
         departure: "Port Campbell, Australia",
         description: 'Oceania is a region made up of thousands of islands throughout the Central and South Pacific Ocean. It includes Australia, the smallest continent in terms of total land area.',
@@ -47,8 +37,8 @@ const cruises = [
     },
     {
         id: 4,
-        cruise: "Southern Africa",
-        image: cruise4,
+        title: "Southern Africa",
+        image: 'https://res.cloudinary.com/drulocuwt/image/upload/v1664591022/cards/southern-africa_ryfvne.jpg',
         alt: "A beach on South Africa",
         departure: "Capetown, South Africa",
         description: 'Southern Africa is the southernmost subregion of the African continent, south of the Congo and Tanzania. The physical location is the large part of Africa to the south of the extensive Congo River basin. Southern Africa is home to a number of river systems; the Zambezi River is the most prominent.',
@@ -59,8 +49,8 @@ const cruises = [
     },
     {
         id: 5,
-        cruise: "Caribbean",
-        image: cruise5,
+        title: "Caribbean",
+        image: 'https://res.cloudinary.com/drulocuwt/image/upload/v1664591021/cards/caribbean_lrudhd.jpg',
         alt: "A beach on the Caribbean, Mexico",
         departure: "Panama, Panama",
         description: 'Physiographically, the Caribbean region is mainly a chain of islands surrounding the Caribbean Sea. To the north, the region is bordered by the Gulf of Mexico, the Straits of Florida and the Northern Atlantic Ocean, which lies to the east and northeast. To the south lies the coastline of the continent of South America.',
@@ -71,8 +61,8 @@ const cruises = [
     },
     {
         id: 6,
-        cruise: "Mediterranean Sea",
-        image: cruise6,
+        title: "Mediterranean Sea",
+        image: 'https://res.cloudinary.com/drulocuwt/image/upload/v1664591021/cards/mediterranean-sea_k2gclr.jpg',
         alt: "A beach on the Mediterranean Sea, Italy",
         departure: "Porto Fino, Italy",
         description: 'For a region that takes its name from the sea it surrounds, the Mediterranean is surprisingly hilly. It includes high mountains and rocky shores, thick scrub and semi-arid steppes, coastal wetlands and sandy beaches as well as a myriad of islands dotted across the sea.',
@@ -83,8 +73,8 @@ const cruises = [
     },
     {
         id: 7,
-        cruise: "Antartic",
-        image: cruise7,
+        title: "Antartic",
+        image: 'https://res.cloudinary.com/drulocuwt/image/upload/v1664591021/cards/antartic_bi6o5j.jpg',
         alt: "Antartic paradise, at the very south",
         departure: "Río Negro, Argentina",
         description: 'Antarctica is the southernmost continent in the world and it is centered asymmetrically around the geographic South Pole and surrounded by the Southern Ocean',
@@ -95,8 +85,8 @@ const cruises = [
     },
     {
         id: 8,
-        cruise: "Central Pacific",
-        image: cruise8,
+        title: "Central Pacific",
+        image: 'https://res.cloudinary.com/drulocuwt/image/upload/v1664591021/cards/central-pacific_lbrd92.jpg',
         alt: "A beach on the Pacific Ocean, Hawaii",
         departure: "Vancouver, Canada",
         description: 'Hawaii is known for its beautiful beaches, its laid-back lifestyle, and its delicious food. From traditional Hawaiian dishes like poi and laulau to modern favorites like poke and Kalua pig, you are in for a treat after exploring the mountains or surfing the waves.',
@@ -104,7 +94,5 @@ const cruises = [
         duration: 12,
         price: 1500,
         stock: 4
-    }
-]
-
-export default cruises;
+    },
+];
