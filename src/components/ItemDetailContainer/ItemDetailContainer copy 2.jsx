@@ -5,21 +5,32 @@ import { useParams } from "react-router-dom";
 // import { useCartContext } from "../../context/CartContext";
 import ItemDetail from "../ItemDetail/ItemDetail";
 
-const ItemDetailContainer = () => {
+export const ItemDetailContainer = () => {
+  
+  // const products = Object.keys(cruises).map((key) => cruises[key]);
+
   const [item, setItem] = useState([]);
 
-  const { id } = useParams();
+  // const values = useContext(useCartContext);
+  // console.log(values);
+
+  const {id} = useParams();
+
+    // useEffect(()=> {
+    //     getData(parseInt(id)).then(response => {
+    //         setData(response)
+    //     })
+    // }, [id])
 
     useEffect( () => {
-      const getCruise = () =>
-        new Promise(( res, rej) => {
+        const getData = () => new Promise(( res, rej) => {
           const cruise = cruises.find((prod) => prod.id === Number(id));
           setTimeout( () => {
             res(cruise);
           }, 1000);
         });
 
-    getCruise()
+    getData()
     .then((info) => {
       setItem(info);
     })
@@ -29,7 +40,10 @@ const ItemDetailContainer = () => {
 }, [id]);
 
   return (
-    <ItemDetail item={item} />
+    // data.map (cruise => <ItemDetail key={cruise.id} info={cruise} itemDetail={itemDetail} />
+   <ItemDetail item={item} />
+  //  <ItemDetail data={cruises} />
+  //  <ItemDetail key={cruise.id} item={cruise} />
   );
 }
 

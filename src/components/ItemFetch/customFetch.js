@@ -11,7 +11,7 @@ export function customFetch () {
 export function getData (id) {
     return new Promise (resolve => {
         setTimeout(() => {
-            resolve(cruises.find(prod => prod.id === id))
+            resolve(cruises.find(item => item.id === id))
         }, 500)
     })
 }

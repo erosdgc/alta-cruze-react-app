@@ -1,10 +1,13 @@
 import Item from "../Item/Item";
 import React from "react";
 
-export default function ItemList ({data = []}) {
+const ItemList = ({ items }) => {
     return (
-        data.map
-        (cruise => 
-            <Item key={cruise.id} info={cruise} />)
+        <div className="container-fluid">
+            {items.map((item) => {
+                return <Item key={item.id} item={item} />})}
+        </div>
     );
-}
+};
+
+export default ItemList;
