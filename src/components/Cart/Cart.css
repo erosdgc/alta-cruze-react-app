@@ -1,3 +1,42 @@
+.travelers span {
+    font-weight: bolder;
+}
+
+.price {
+    font-size: 24px;
+}
+
+.price span {
+    font-weight: bolder;
+}
+
+.subtotal {
+    font-size: 24px;
+}
+
+.subtotal span {
+    font-weight: bolder;
+}
+
+.total span {
+    font-weight: bolder;
+}
+
+.disclaimer {
+    font-size: .8rem;
+}
+
+.remove-cruise {
+    color: white;
+    background-color: rgb(192, 192, 45);
+    border: 1px solid rgb(192, 192, 45);
+    font-size: 22px;
+}
+
 .btn-danger {
-    font-size: 26px;
+    font-size: 22px;
+}
+
+.checkout {
+    font-size: 22px;
 }

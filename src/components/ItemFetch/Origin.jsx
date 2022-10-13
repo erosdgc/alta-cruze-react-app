@@ -2,14 +2,14 @@ export const cruises = [
     {
         id: 1,
         title: "South America",
-        image: 'https://res.cloudinary.com/drulocuwt/image/upload/v1664591022/cards/south-america_ceyhdu.jpg',
+        image: 'https://res.cloudinary.com/drulocuwt/image/upload/v1664900906/cards/sa_spwear.jpg',
         alt: "A beach on South America, Brazil",
         departure: "Buenos Aires, Argentina",
         description: 'South America is bounded by the Caribbean Sea to the northwest and north, the Atlantic Ocean to the northeast, east, and southeast, and the Pacific Ocean to the west.',
         date: "December 3, 2022.",
         duration: 5,
         price: 600,
-        stock: 4
+        stock: 5,
     },
     {
         id: 2,
@@ -21,7 +21,7 @@ export const cruises = [
         date: "July 3, 2022.",
         duration: 6,
         price: 700,
-        stock: 4
+        stock: 5,
     },
     {
         id: 3,
@@ -33,7 +33,7 @@ export const cruises = [
         date: "December 24, 2022.",
         duration: 7,
         price: 850,
-        stock: 4
+        stock: 5,
     },
     {
         id: 4,
@@ -45,7 +45,7 @@ export const cruises = [
         date: "December 20, 2022.",
         duration: 9,
         price: 1050,
-        stock: 4
+        stock: 5,
     },
     {
         id: 5,
@@ -57,7 +57,7 @@ export const cruises = [
         date: "May 15, 2022.",
         duration: 9,
         price: 1100,
-        stock: 4
+        stock: 5,
     },
     {
         id: 6,
@@ -69,19 +69,19 @@ export const cruises = [
         date: "June 18, 2022.",
         duration: 10,
         price: 1200,
-        stock: 4
+        stock: 5,
     },
     {
         id: 7,
         title: "Antartic",
-        image: 'https://res.cloudinary.com/drulocuwt/image/upload/v1664591021/cards/antartic_bi6o5j.jpg',
+        image: 'https://res.cloudinary.com/drulocuwt/image/upload/v1664900580/cards/antartic-1_wskoao.jpg',
         alt: "Antartic paradise, at the very south",
         departure: "Río Negro, Argentina",
         description: 'Antarctica is the southernmost continent in the world and it is centered asymmetrically around the geographic South Pole and surrounded by the Southern Ocean',
         date: "January 31, 2022.",
         duration: 10,
         price: 1300,
-        stock: 4
+        stock: 5,
     },
     {
         id: 8,
@@ -93,6 +93,6 @@ export const cruises = [
         date: "May 11, 2022.",
         duration: 12,
         price: 1500,
-        stock: 4
+        stock: 5,
     },
 ];

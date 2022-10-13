@@ -1,8 +1,7 @@
+import { collection, doc, getDoc } from "firebase/firestore";
 import React, { useState, useEffect } from "react";
-// import { getData } from "../ItemFetch/customFetch";
-import { cruises } from "../ItemFetch/Origin";
 import { useParams } from "react-router-dom";
-// import { useCartContext } from "../../context/CartContext";
+import { db } from "../../firebaseConfig";
 import ItemDetail from "../ItemDetail/ItemDetail";
 
 const ItemDetailContainer = () => {
@@ -11,27 +10,20 @@ const ItemDetailContainer = () => {
   const { id } = useParams();
 
     useEffect( () => {
-      const getCruise = () =>
-        new Promise(( res, rej) => {
-          const cruise = cruises.find((prod) => prod.id === Number(id));
-          setTimeout( () => {
-            res(cruise);
-          }, 1000);
+      const prodCollection = collection (db, 'cruises');
+      const ref = doc(prodCollection, id);
+      getDoc(ref).then((res) => {
+        setItem({
+          id: res.id,
+          ...res.data(),
         });
-
-    getCruise()
-    .then((info) => {
-      setItem(info);
-    })
-    .catch((error) => {
-      console.log(error);
-    });
-}, [id]);
+      });
+    }, [id]);
 
   return (
     <ItemDetail item={item} />
   );
-}
+};
 
 export default ItemDetailContainer;
 

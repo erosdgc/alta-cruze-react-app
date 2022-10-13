@@ -63,11 +63,22 @@ const CartProvider = ( props ) => {
       setCart([]);
     };
 
+    // Unidades totales
     const totalUnities = () => {
       const copy = [...cart];
       let count = 0;
       copy.forEach((cruise) => {
           count = count + cruise.quantity;
+      });
+      return count;
+    };
+
+    // Precio total
+    const totalPrice = () => {
+      const copy = [...cart];
+      let count = 0;
+      copy.forEach((cruise) => {
+          count = count + cruise.quantity * cruise.price;
       });
       return count;
     };
@@ -94,6 +105,7 @@ const CartProvider = ( props ) => {
         addToCart,
         deleteAll,
         totalUnities,
+        totalPrice,
         deleteOne
     }}>
         {props.children}

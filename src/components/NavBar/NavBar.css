@@ -1,40 +1,5 @@
-html {
-  scroll-behavior: smooth;
-}
-
-.z-index-999 {
-  z-index: 999;
-}
-
-.z-index-0 {
-  z-index: 0;
-}
-
-.roboto-font {
-  font-family: "Roboto", sans-serif;
-}
-
-.sora-font {
-  font-family: 'Sora', sans-serif;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-}
-
-.bg-tr {
-  background-color: hsla(0deg, 0%, 100%, 0.85) !important;
-}
-
-.bg-blur {
-  -webkit-backdrop-filter: blur(.25rem) !important;
-  backdrop-filter: blur(.25rem) !important;
-}
-
-.container-fluid {
-  margin: 0;
-  padding: 0;
+.nav-item .active {
+  border-bottom: 2px solid hsla(0deg, 0%, 100%, 0.7);
 }
 
 /* Header */
@@ -112,22 +77,6 @@ header div h1 span {
 .search {
   width: 16px !important;
 }
- .background-img {
-  background: url(assets/images/hero.jpg);
-  margin: 0;
-  padding: 0;
-  top: 0;
-  left: 0;
-  width: 100%;
- }
-
-.hero img {
-  margin: 0;
-  padding: 0;
-  top: 0;
-  left: 0;
-  width: 100%;
-}
 
 .dropdown-item:hover {
   background-color: hsla(0deg, 0%, 100%, 0.5) !important;
@@ -145,7 +94,7 @@ header div h1 span {
 /* Desktop View */
 @media all and (min-width: 992px) {
 	.navbar .dropdown-menu-end {
-    right: 0;
+    right: 0%;
     left: auto;
   }
 	.navbar .nav-item .dropdown-menu {

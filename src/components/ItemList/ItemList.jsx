@@ -5,7 +5,8 @@ const ItemList = ({ items }) => {
     return (
         <div className="container-fluid">
             {items.map((item) => {
-                return <Item key={item.id} item={item} />})}
+                return <Item key={item.id} item={item} />
+            })}
         </div>
     );
 };

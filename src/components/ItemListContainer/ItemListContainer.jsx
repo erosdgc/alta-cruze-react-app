@@ -1,48 +1,49 @@
-import React, {useState, useEffect, useContext} from "react";
+import React, {useState, useEffect } from "react";
 import ItemList from "../ItemList/ItemList";
-import { cruises } from "../ItemFetch/Origin";
 import { useParams } from "react-router-dom";
-import { CartContext } from "../../context/CartContext";
+// import { CartContext } from "../../context/CartContext";
+import { collection, query, where, getDocs } from "firebase/firestore";
+import { db } from "../../firebaseConfig";
 
 function ItemListContainer (props) {
     const [items, setItems] = useState([]);
-    // const [setItems] = useState([]);
-    const values = useContext(CartContext);
+    // const values = useContext(CartContext);
     
-    // Ejemplo con destructuring
-    // const {valor1, valor3, valor5} = useContext(useCartContext);
-    console.log(values);
+    const { categoryName } = useParams();
 
-    const {categoryId} = useParams()
 
-    useEffect( () => {
-        const getItems = new Promise (resolve => {
-            setTimeout( () => {
-                resolve(cruises);
-            }, 1000);
+    useEffect(() => {
+        const prodCollection = collection(db, 'cruises');
+        const ref = categoryName
+            ? query(prodCollection, where('category', '==', categoryName))
+            : prodCollection;
+
+    getDocs(ref).then((response) => {
+        // data() método que nos provee firestore para transformar la información
+        const cruises = response.docs.map((prod) => {
+            console.log(prod);
+            return {
+                id: prod.id,
+                ...prod.data(),
+            };
         });
-        if (categoryId) {
-            getItems.then(resolve => setItems (resolve.filter(cruises => cruises.category === categoryId)));
-        } else {
-            getItems.then(resolve => setItems (resolve));
-        }
-    }, [categoryId])
+        setItems(cruises);
+    });
+}, [categoryName]);
 
     return (
-        <>
-            <div className="container-xxl">
-                <h1 className="text-center display-3 mt-5">Our Cruises</h1>
-                <ItemList items={items}/>
-            </div>
-        </>
-    )
-}
+        <div>
+            <ItemList items={items} />
+        </div>
+    );
+};
+
 export default ItemListContainer;
 
-export function getItemById (id) {
-    return new Promise (resolve => {
-        setTimeout(() => {
-            resolve(cruises.find(prod => prod.id === id))
-        }, 500)
-    })
-}
+// export function getItemById (id) {
+//     return new Promise (resolve => {
+//         setTimeout(() => {
+//             resolve(cruises.find(prod => prod.id === id))
+//         }, 500)
+//     })
+// }

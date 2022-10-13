@@ -1,3 +1,12 @@
 .card-btn-buy a {
     font-size: 18px;
 }
+
+.date {
+    font-weight: 500;
+}
+
+.description {
+    font-size: 1.2rem !important;
+    font-weight: 400;
+}
