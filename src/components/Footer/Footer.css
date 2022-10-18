@@ -1,0 +1,41 @@
+.main-footer-container {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    0deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(70, 84, 131, 1) 40%,
+    rgba(158, 173, 223, 1) 100%
+  );
+  color: white;
+}
+
+.sub-link-color {
+  color: rgba(255, 255, 255, 0.75) !important;
+}
+
+.logo {
+  width: 125px !important;
+}
+
+.brand-name {
+  position: absolute;
+  width: fit-content !important;
+  text-align: center;
+}
+
+.brand-name h3 {
+  font-size: 40px;
+}
+
+.suscribe {
+  font-size: 1.5rem !important;
+  font-weight: 400;
+}
+
+.footer-brands {
+  font-size: 1.5rem;
+}
+
+.w-fit {
+  width: fit-content;
+}

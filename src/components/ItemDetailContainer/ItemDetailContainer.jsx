@@ -9,21 +9,18 @@ const ItemDetailContainer = () => {
 
   const { id } = useParams();
 
-    useEffect( () => {
-      const prodCollection = collection (db, 'cruises');
-      const ref = doc(prodCollection, id);
-      getDoc(ref).then((res) => {
-        setItem({
-          id: res.id,
-          ...res.data(),
-        });
+  useEffect(() => {
+    const prodCollection = collection(db, "cruises");
+    const ref = doc(prodCollection, id);
+    getDoc(ref).then((res) => {
+      setItem({
+        id: res.id,
+        ...res.data(),
       });
-    }, [id]);
+    });
+  }, [id]);
 
-  return (
-    <ItemDetail item={item} />
-  );
+  return <ItemDetail item={item} />;
 };
 
 export default ItemDetailContainer;
-

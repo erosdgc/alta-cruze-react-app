@@ -1,0 +1,31 @@
+.please {
+    /* font-size: 22px; */
+    font-style: italic;
+}
+
+label {
+    font-weight: 500;
+}
+
+.termsContainer {
+    font-weight: 400;
+}
+
+.terms {
+    text-decoration: none;
+}
+
+
+/* Hide Arrows From Input Number: */
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    appearance: textfield;
+}
