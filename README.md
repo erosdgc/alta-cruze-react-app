@@ -25,7 +25,7 @@ There are some things to fix yet, but it's navigable (mostly).
 
 2. Once inside the item details, select a number of travelers.
 
-    Note: the maximum quantity of people to proceed with a booking is 4. Otherwhise, it is recommended to send an email to the corresponding address.
+    *Note: the maximum quantity of people to proceed with a booking is 4. Otherwhise, it is recommended to send an email to the corresponding address.*
 
 3. Fill out the checkout form with the buyer information.
 

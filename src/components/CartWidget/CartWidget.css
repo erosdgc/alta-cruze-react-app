@@ -1,6 +1,10 @@
 .unities {
     top: -.5rem;
-    right: .4rem;
+    left: 1rem;
     font-size: 12px;
     color: white;
+}
+
+.cartWidgetContainer {
+    min-width: 400px;
 }

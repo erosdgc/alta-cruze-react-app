@@ -4,8 +4,14 @@ export const CartContext = createContext();
 
 const CartProvider = ({ children }) => {
   const [cart, setCart] = useState(
-    JSON.parse(localStorage.getItem('cart')) || []
+    JSON.parse(localStorage.getItem("cart")) || []
   );
+
+  const saveToLocalStorage = () => {
+    if (cart.length === 0) return localStorage.clear();
+    localStorage.setItem("cart", JSON.stringify(cart));
+  };
+  saveToLocalStorage();
 
   const addToCart = (item, quantity) => {
     const cruise = { ...item, quantity };

@@ -1,9 +1,10 @@
 import React from 'react'
+import ComingSoon from '../ComingSoon/ComingSoon'
 
 const Experience = () => {
   return (
     <div>
-        <h1 className='display-1 text-center'>Experience</h1>
+      <ComingSoon />
     </div>
   )
 }

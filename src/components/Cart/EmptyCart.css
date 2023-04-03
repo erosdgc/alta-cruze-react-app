@@ -1,0 +1,7 @@
+.empty-cart-img {
+    height: 100vh !important;
+}
+
+.empty-cart-card {
+    z-index: 1;
+}

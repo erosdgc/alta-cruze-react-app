@@ -1,0 +1,35 @@
+#viewCategory {
+  scroll-margin-top: 225px;
+}
+
+.card-name {
+  font-size: 2.2rem;
+}
+
+.item-img {
+  width: 100%;
+  object-fit: cover;
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .card-name {
+    font-size: 2.8rem;
+  }
+
+  .item-img {
+    width: 100%;
+    object-fit: cover;
+    transition: 0.3s all ease-in-out;
+  }
+
+  .card-image {
+    overflow: hidden;
+  }
+
+  .card-image:hover .item-img {
+    transition: 0.3s all ease-in-out;
+    transform: scale(1.1);
+    border: 0;
+  }
+}

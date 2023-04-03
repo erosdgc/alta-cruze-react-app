@@ -2,11 +2,10 @@ import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { CartContext } from "../../context/CartContext";
 import "./Cart.css";
-import EmptyCart from "./EmptyCart";
 // import DialogOne from "./DialogOne";
 import MinorsQuestion from "./MinorsQuestion";
 
-const Cart = () => {
+const Cart = (cruise) => {
   const { cart, deleteOne, deleteAll, totalPrice } = useContext(CartContext);
   const total = totalPrice();
 
@@ -18,7 +17,36 @@ const Cart = () => {
   }, [showDialogOne]);
 
   if (cart.length === 0) {
-    return <EmptyCart />;
+    return (
+      <div className="container-fluid py-5 form-gradient">
+        <div className="container mt-fill text-sm-center">
+          <div className="col-10 col-lg-10 col-xl-8 mx-auto card rounded-0 border-0 shadow px-4 px-sm-5 py-4 py-sm-5">
+            <h2 className="display-4">Your order seems to be empty.</h2>
+            <h3 className="display-5 mt-4">
+              Would you like to{" "}
+              <Link className="text-decoration-none home" to="/">
+                return home
+              </Link>
+              ?
+            </h3>
+            <p className="text-muted mt-4 mb-2">
+              If you can't find what you're looking for, maybe you could{" "}
+              <Link to="/contact" className="text-decoration-none">
+                send us a message
+              </Link>{" "}
+              in order to help you.
+            </p>
+            <p className="text-muted">
+              You could also see our{" "}
+              <Link to="/contact/faqs" className="text-decoration-none">
+                FAQs
+              </Link>
+              .
+            </p>
+          </div>
+        </div>
+      </div>
+    );
   } else {
     return (
       <>
@@ -33,7 +61,7 @@ const Cart = () => {
           ))}
           <div className="px-1 px-sm-0 cart-card-container w-100">
             <div className="modal-dialog cart-dialog pb-5 px-2 px-md-0">
-              <div className="cart-content shadow-hover px-3 px-md-4 py-4 p-lg-5 bg-tr bg-blur col-12 col-sm-10 col-xl-8 mx-auto">
+              <div className="cart-content shadow-hover px-3 px-md-4 py-4 p-lg-5 bg-tr bg-blur col-12 col-sm-10 col-md-8 mx-auto">
                 <div className="mb-4 text-justify">
                   <h2 className="display-3 mt-1">Good choice!</h2>
                   <p className="text-mute mt-3">
@@ -52,10 +80,7 @@ const Cart = () => {
                         <div>
                           <button
                             className="px-3 py-3 btn x-btn btn-danger rounded-0 hover-shadow text-light border-0 remove-cruise"
-                            onClick={() => {
-                              setShowDialogOne(true);
-                              // deleteOne(cruise.id);
-                            }}
+                            onClick={() => setShowDialogOne(true)}
                           >
                             <i className="fa-solid fa-x"></i>
                           </button>
@@ -121,40 +146,30 @@ const Cart = () => {
             </div>
           </div>
         </div>
-
-        {cart.map((cruise) => (
-          <div>
-            {showDialogOne ? (
-              <div
-                key={cruise.id}
-                className="container-fluid dialog-container d-flex flex-column justify-content-center align-items-center"
-              >
-                <div className="d-flex flex-column justify-content-center align-items-center rounded-0 overflow-hidden bg-light shadow-lg p-5">
-                  <p className="lead fs-3">
-                    Are you sure to delete this cruise?
-                  </p>
-                  <div className="mt-3 gap-2 col-12">
-                    <button
-                      className="btn btn-primary col-6"
-                      onClick={() => {
-                        deleteOne(cruise.id);
-                        setShowDialogOne(false);
-                      }}
-                    >
-                      YES
-                    </button>
-                    <button
-                      className="btn btn-danger col-6"
-                      onClick={() => setShowDialogOne(false)}
-                    >
-                      NO
-                    </button>
-                  </div>
-                </div>
+        {showDialogOne ? (
+          <div className="container-fluid dialog-container d-flex flex-column justify-content-center align-items-center">
+            <div className="d-flex flex-column justify-content-center align-items-center rounded-0 overflow-hidden bg-light shadow-lg p-5">
+              <p className="lead fs-3">Are you sure to delete this cruise?</p>
+              <div className="mt-3 gap-2 col-12">
+                <button
+                  className="btn btn-primary col-6"
+                  onClick={() => {
+                    deleteOne(cruise.id);
+                    setShowDialogOne(false);
+                  }}
+                >
+                  YES
+                </button>
+                <button
+                  className="btn btn-danger col-6"
+                  onClick={() => setShowDialogOne(false)}
+                >
+                  NO
+                </button>
               </div>
-            ) : null}
+            </div>
           </div>
-        ))}
+        ) : null}
       </>
     );
   }

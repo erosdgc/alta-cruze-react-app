@@ -1,0 +1,16 @@
+.subscribe-modal-container {
+  position: fixed;
+  top: 0 !important;
+  left: 0;
+  height: 100%;
+  width: 100vw;
+  backdrop-filter: blur(4px);
+  z-index: 9999 !important;
+
+  /* padding-block: 2rem;
+    padding-inline: 5rem; */
+}
+
+.subs-btn {
+  z-index: 999 !important;
+}

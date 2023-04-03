@@ -1,0 +1,17 @@
+.category-img {
+  height: 100vh !important;
+  width: 100%;
+  object-fit: cover;
+}
+
+#category {
+  scroll-margin-top: 178px !important;
+}
+
+
+/* Large devices (desktops, 992px and up) */
+/* @media (min-width: 992px) {
+  #category {
+    scroll-margin-top: 178px !important;
+  }
+} */

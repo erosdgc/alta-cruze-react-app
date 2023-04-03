@@ -2,16 +2,19 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* overflow: hidden; */
 }
 
-body {
-  overflow: auto !important;
-  -ms-overflow-style: none; /* Internet Explorer 10+ */
-  scrollbar-width: none; /* Firefox */
+/* Scroll Snap Behaviour */
+.snap-scroll-container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll hidden;
+  height: 100vh;
 }
 
-body::-webkit-scrollbar {
-  display: none; /* Safari and Chrome */
+.snap-scroll-child {
+  scroll-snap-align: start;
+  height: 100vh;
 }
 
 /* Libre Baskerville Google Font */
@@ -33,14 +36,6 @@ body::-webkit-scrollbar {
 }
 
 /* -------------------------- */
-
-.h-full {
-  height: 100%;
-}
-
-.w-fit {
-  width: fit-content;
-}
 
 .img-gradient-main {
   position: relative;
@@ -76,10 +71,6 @@ body::-webkit-scrollbar {
 }
 
 .background-gradient {
-  position: relative;
-}
-
-.background-gradient::after {
   content: "";
   position: absolute;
   left: 0;
@@ -89,8 +80,8 @@ body::-webkit-scrollbar {
   background: linear-gradient(
     0deg,
     rgba(127, 149, 226, 0) 0%,
-    rgba(0, 0, 0, 0.25) 50%,
-    rgba(0, 0, 0, 0.7) 100%
+    rgba(32, 42, 77, 0) 50%,
+    rgba(0, 0, 0, 0.8) 100%
   );
 }
 
@@ -205,12 +196,6 @@ html {
   text-indent: 5px;
 }
 
-/* COLORS */
-.text-primary {
-  color: hsl(226, 30%, 39%) !important;
-}
-
-/* BACKGROUNDS */
 .bg-tr {
   background-color: hsla(0deg, 0%, 100%, 0.85) !important;
 }
@@ -228,7 +213,6 @@ html {
   backdrop-filter: blur(0.25rem) !important;
 }
 
-/* BORDERS */
 .border-dark {
   --bs-border-opacity: 0.3;
   border-color: rgba(
@@ -262,8 +246,10 @@ html {
   transition: all 0.2s ease-in-out;
 }
 
+
+
 .btn-primary {
-  background: hsl(226, 30%, 39%);
+  background: rgb(70, 84, 131);
   border: 1px solid rgb(70, 84, 131);
   font-size: 14px;
   font-weight: 500;
@@ -272,14 +258,16 @@ html {
 }
 
 .btn-primary:hover {
-  background: hsl(226, 41%, 33%);
-  border: 1px solid hsl(226, 41%, 33%);
+  background: hsla(0, 0%, 100%, 0.3);
+  color: rgb(70, 84, 131);
+  border: 1px solid hsla(0, 0%, 100%, 0.3);
   box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.1);
 }
 
 .btn-primary:focus {
-  background: hsla(226, 30%, 39%, 0.9);
-  border: 1px solid hsl(226, 41%, 33%);
+  background: rgb(46, 59, 100);
+  border: 1px solid rgb(46, 59, 100);
+  color: rgba(255, 255, 255, 0.9);
   transition: all 0.2s ease-in-out;
 }
 
@@ -289,18 +277,18 @@ html {
   font-weight: 500;
   border-radius: 0%;
   letter-spacing: 0.2rem;
-  color: hsl(226, 30%, 39%);
+  color: rgb(70, 84, 131);
 }
 
 .btn-light:hover {
-  background: hsla(226, 30%, 39%, 0.9);
+  background: rgba(70, 84, 131, 0.9);
   color: rgba(255, 255, 255, 0.9);
   border: 1px solid rgb(70, 84, 131);
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 .btn-danger {
-  border: 1px solid hsl(354, 70%, 54%);
+  border: 1px solid #dc3545;
   font-size: 14px;
   font-weight: 500;
   border-radius: 0%;
@@ -308,13 +296,10 @@ html {
 }
 
 .btn-danger:hover {
-  background: hsl(354, 66%, 41%);
-  border: 1px solid hsla(354, 70%, 54%, 0.603);
+  background: hsla(0deg, 0%, 100%, 0);
+  border: 1px solid #dc3545;
+  color: #dc3545;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
-}
-
-.btn-danger:focus {
-  background: hsla(354, 70%, 54%, 0.9);
 }
 
 .btn-warning {
@@ -326,14 +311,10 @@ html {
 }
 
 .btn-warning:hover {
-  background: hsl(45, 85%, 47%);
+  background: rgba(0, 0, 0, 0.5);
   border: 0;
-  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
-}
-
-.btn-warning:focus {
-  background: hsla(0, 0%, 20%, 0.6);
-  color: hsl(45, 86%, 52%);
+  color: #ffc107;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 .btn-text {
@@ -348,6 +329,7 @@ html {
 }
 
 .btn-dark {
+  border: 0;
   font-size: 14px;
   font-weight: 500;
   border-radius: 0%;
@@ -355,8 +337,9 @@ html {
 }
 
 .btn-dark:hover {
-  border: 1px solid rgb(63, 63, 63);
-  background: rgb(63, 63, 63);
+  border: 0;
+  background: rgba(0, 0, 0, 0);
+  color: #212529;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
 }
 
