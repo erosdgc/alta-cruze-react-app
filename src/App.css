@@ -332,8 +332,7 @@ html {
 }
 
 .btn-warning:focus {
-  background: hsla(0, 0%, 20%, 0.6);
-  color: hsl(45, 86%, 52%);
+  background: hsl(45, 85%, 47%);
 }
 
 .btn-text {

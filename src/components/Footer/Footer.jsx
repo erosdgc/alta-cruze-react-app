@@ -176,12 +176,20 @@ const Footer = () => {
           <div className="d-flex flex-column align-items-center justify-content-center pb-md-0 py-4 my-lg-4 border-top">
             <ul className="list-unstyled d-flex footer-brands gap-2">
               <li className="ms-3">
-                <a className="link-light" href="https://www.facebook.com/">
+                <a
+                  className="link-light"
+                  href="https://www.facebook.com/"
+                  target="_blank"
+                >
                   <i className="fa-brands fa-square-facebook"></i>
                 </a>
               </li>
               <li className="ms-3">
-                <a className="link-light" href="https://www.instagram.com/">
+                <a
+                  className="link-light"
+                  href="https://www.instagram.com/"
+                  target="_blank"
+                >
                   <i className="fa-brands fa-instagram"></i>
                 </a>
               </li>
@@ -189,12 +197,17 @@ const Footer = () => {
                 <a
                   className="link-light"
                   href="https://www.linkedin.com/in/erosdavidgomezcentofanti/"
+                  target="_blank"
                 >
                   <i className="fa-brands fa-linkedin-in"></i>
                 </a>
               </li>
               <li className="ms-3">
-                <a className="link-light" href="https://github.com/erosdgc">
+                <a
+                  className="link-light"
+                  href="https://github.com/erosdgc"
+                  target="_blank"
+                >
                   <i className="fa-brands fa-github"></i>
                 </a>
               </li>

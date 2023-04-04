@@ -20,8 +20,8 @@ const CartWidget = () => {
           <i className="nav-link link-icon fa-solid fa-user dropdown"></i>
         </Link>
         <div className="cartEmptyWidget dropdown-menu dropdown-menu-end dropdown-menu-light rounded-0 border-0 bg-tr fade-down shadow-sm bg-blur mt-2">
-          <p className="lead fs-5 inter-font text-bolder text-center px-4 mt-3">
-            Your order is empty.
+          <p className=" fs-6 inter-font text-bolder text-center px-4 mt-3">
+            No cruises selected.
           </p>
         </div>
       </div>

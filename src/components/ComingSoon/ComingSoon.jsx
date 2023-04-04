@@ -23,33 +23,24 @@ const ComingSoon = () => {
             <Subscribe />
           </div>
 
-          {/* <div className="mt-3 d-flex flex-column flex-sm-row col-12 col-md-8 col-xl-6 mx-auto gap-2">
-            <label htmlFor="newsletter2" className="visually-hidden col-12 col-sm-8 col-lg-7 col-xl-8 col-xxl-9">
-              Email address
-            </label>
-            <input
-              id="newsletter2"
-              type="text"
-              className="form-control rounded-0"
-              placeholder="Email address"
-            />
-            <button
-              className="btn btn-warning rounded-0 col-12 col-sm-4 col-lg-5 col-xl-4 col-xxl-3 mt-2 mt-sm-0 mx-auto"
-              type="button"
-            >
-              SUBSCRIBE
-            </button>
-          </div> */}
           <div className="d-flex flex-column align-items-center justify-content-center pb-md-0 py-4 mt-lg-2">
             {/* <h3 className="lead inter-font fs-3">Follow us:</h3> */}
             <ul className="list-unstyled d-flex footer-brands fs-3 gap-4 mt-5 mt-md-0">
               <li className="ms-3">
-                <a className="link-light" href="https://www.facebook.com/">
+                <a
+                  className="link-light"
+                  href="https://www.facebook.com/"
+                  target="_blank"
+                >
                   <i className="fa-brands fa-square-facebook"></i>
                 </a>
               </li>
               <li className="ms-3">
-                <a className="link-light" href="https://www.instagram.com/">
+                <a
+                  className="link-light"
+                  href="https://www.instagram.com/"
+                  target="_blank"
+                >
                   <i className="fa-brands fa-instagram"></i>
                 </a>
               </li>
@@ -57,12 +48,17 @@ const ComingSoon = () => {
                 <a
                   className="link-light"
                   href="https://www.linkedin.com/in/erosdavidgomezcentofanti/"
+                  target="_blank"
                 >
                   <i className="fa-brands fa-linkedin-in"></i>
                 </a>
               </li>
               <li className="ms-3">
-                <a className="link-light" href="https://github.com/erosdgc">
+                <a
+                  className="link-light"
+                  href="https://github.com/erosdgc"
+                  target="_blank"
+                >
                   <i className="fa-brands fa-github"></i>
                 </a>
               </li>
