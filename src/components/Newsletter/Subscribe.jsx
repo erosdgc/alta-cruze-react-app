@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { Form } from "react-bootstrap";
 import SubscribeModal from "./SubscribeModal";
-// import "./Subscribe.css";
+import { BiMessageCheck, BiMessageAltX } from "react-icons/bi";
 
 const Subscribe = () => {
   const [email, setEmail] = useState("");
@@ -18,9 +18,7 @@ const Subscribe = () => {
     if (email === "") {
       setModalMessage("Please enter your email to subscribe.");
     } else {
-      setModalMessage(
-        "You have successfully subscribed to our newsletter!"
-      );
+      setModalMessage("You have successfully subscribed to our newsletter!");
     }
     setShowModal(true);
   };
