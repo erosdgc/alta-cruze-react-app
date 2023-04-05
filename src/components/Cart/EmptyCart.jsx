@@ -4,16 +4,16 @@ import './EmptyCart.css'
 
 const EmptyCart = () => {
   return (
-    <div className="container-fluid background-gradient">
+    <div className="container-fluid background-gradient h-full">
       <img
         className="bg-img position-fixed empty-cart-img"
         src="https://res.cloudinary.com/drulocuwt/image/upload/v1669927162/atlas-cruzer-react-app/various/empty-card_vvevyk.jpg"
         alt="Clouds in the sky"
       />
-      <div className="container text-sm-center">
-        <div className="col-10 col-lg-10 col-xl-8 mx-auto card rounded-0 border-0 shadow px-4 px-sm-5 py-4 py-sm-5 empty-cart-card">
-          <h2 className="display-4">Your order seems to be empty.</h2>
-          <h3 className="display-5 mt-4">
+      <div className="card-container w-100 px-3 px-lg-0 text-center mt-fill content-over-img d-flex justify-content-center">
+        <div className="empty-cart-card card rounded-0 bg-tr border-0 shadow px-4 px-sm-5 py-5">
+          <h2 className="display-4">No cruises selected.</h2>
+          <h3 className="display-4 mt-4">
             Would you like to{" "}
             <Link className="text-decoration-none home" to="/">
               return home
@@ -28,7 +28,7 @@ const EmptyCart = () => {
             in order to help you.
           </p>
           <p className="text-muted">
-            You could also see our{" "}
+            You could also take a look at our{" "}
             <Link to="/contact/faqs" className="text-decoration-none">
               FAQs
             </Link>

@@ -345,6 +345,7 @@ const Navbar = () => {
                   <a
                     className="nav-link link-icon"
                     href="https://www.facebook.com"
+                    target="_blank"
                   >
                     <i className="fa-brands fa-square-facebook"></i>
                   </a>
@@ -353,6 +354,7 @@ const Navbar = () => {
                   <a
                     className="nav-link link-icon"
                     href="https://www.instagram.com"
+                    target="_blank"
                   >
                     <i className="fa-brands fa-instagram"></i>
                   </a>
@@ -361,6 +363,7 @@ const Navbar = () => {
                   <a
                     className="nav-link link-icon"
                     href="https://github.com/erosdgc"
+                    target="_blank"
                   >
                     <i className="fa-brands fa-github"></i>
                   </a>
@@ -368,7 +371,8 @@ const Navbar = () => {
                 <li className="nav-item nav-link ps-2">
                   <a
                     className="nav-link link-icon"
-                    href="https://www.linkedin.com/in/erosdavidgomezcentofanti/"
+                    href="https://www.linkedin.com/in/erosdgc/"
+                    target="_blank"
                   >
                     <i className="fa-brands fa-linkedin-in"></i>
                   </a>

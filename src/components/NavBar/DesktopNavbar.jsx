@@ -29,7 +29,10 @@ const DesktopNavbar = () => {
       <div className="my-auto d-lg-flex bg-blur px-3 px-xl-4">
         <ul className="navbar-nav d-flex flex-row my-auto">
           <li className="nav-item nav-link">
-            <Link to="/#" className="nav-item nav-link link-header px-1 me-2 me-lg-4 me-xxl-5 w-fit">
+            <Link
+              to="/#"
+              className="nav-item nav-link link-header px-1 me-2 me-lg-4 me-xxl-5 w-fit"
+            >
               Home
             </Link>
           </li>
@@ -144,7 +147,7 @@ const DesktopNavbar = () => {
               <li>
                 <Link
                   className="dropdown-item roboto-font d-flex justify-content-between"
-                  to="/experience/membership"
+                  to="/experience"
                 >
                   Membership{" "}
                   <span>
@@ -155,7 +158,7 @@ const DesktopNavbar = () => {
                   <li>
                     <Link
                       className="dropdown-item roboto-font d-flex justify-content-between"
-                      to="/experience/membership/register"
+                      to="/experience"
                     >
                       Suscribe Now
                     </Link>
@@ -202,7 +205,7 @@ const DesktopNavbar = () => {
             >
               <Link
                 className="dropdown-item roboto-font d-flex justify-content-between"
-                to="/contact/advisors"
+                to="#advisors"
               >
                 Advisors
               </Link>
@@ -252,7 +255,11 @@ const DesktopNavbar = () => {
         <div className="nav-brands my-auto ps-3 px-xl-4">
           <ul className="navbar-nav social-media flex-row gap-3 gap-xl-4">
             <li className="nav-item nav-link">
-              <a className="nav-link link-icon" href="https://www.facebook.com">
+              <a
+                className="nav-link link-icon"
+                href="https://www.facebook.com"
+                target="_blank"
+              >
                 <i className="fa-brands fa-square-facebook"></i>
               </a>
             </li>
@@ -260,6 +267,7 @@ const DesktopNavbar = () => {
               <a
                 className="nav-link link-icon"
                 href="https://www.instagram.com"
+                target="_blank"
               >
                 <i className="fa-brands fa-instagram"></i>
               </a>
@@ -268,6 +276,7 @@ const DesktopNavbar = () => {
               <a
                 className="nav-link link-icon"
                 href="https://github.com/erosdgc"
+                target="_blank"
               >
                 <i className="fa-brands fa-github"></i>
               </a>
@@ -275,7 +284,8 @@ const DesktopNavbar = () => {
             <li className="nav-item nav-link">
               <a
                 className="nav-link link-icon"
-                href="https://www.linkedin.com/in/erosdavidgomezcentofanti/"
+                href="https://www.linkedin.com/in/erosdgc/"
+                target="_blank"
               >
                 <i className="fa-brands fa-linkedin-in"></i>
               </a>

@@ -136,6 +136,7 @@ const Cart = () => {
                   <div className="mt-3 gap-2 col-12">
                     <button
                       className="btn btn-primary col-6"
+                      to="#"
                       onClick={() => {
                         deleteOne(cruise.id);
                         setShowDialogOne(false);

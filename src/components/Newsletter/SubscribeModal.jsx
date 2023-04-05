@@ -14,7 +14,7 @@ const SubscribeModal = ({ showModal, setShowModal, modalMessage }) => {
     >
       <div className="rounded-0 bg-blur shadow-lg bg-light">
         <Modal.Header closeButton>
-          <Modal.Title>Subscription</Modal.Title>
+          <Modal.Title>Newsletter</Modal.Title>
         </Modal.Header>
         <Modal.Body>{modalMessage}</Modal.Body>
         <Modal.Footer>

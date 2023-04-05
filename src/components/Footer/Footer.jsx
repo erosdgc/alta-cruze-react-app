@@ -5,7 +5,7 @@ import { HashLink } from "react-router-hash-link";
 import logo from "../../assets/images/icon.png";
 import { db } from "../../firebaseConfig";
 import "./Footer.css";
-import FooterSubscribe from "../Newsletter/FooterSubscribe";
+import Subscribe from "../Newsletter/Subscribe";
 
 const Footer = () => {
   const [cat, setCat] = useState([]);
@@ -58,7 +58,11 @@ const Footer = () => {
                     </a>
                   </li>
                   <li className="nav-item mb-2 w-fit">
-                    <a href="/#" className="nav-link p-0 sub-link-color">
+                    <a
+                      href="https://www.linkedin.com/in/erosdgc/"
+                      target="_blank"
+                      className="nav-link p-0 sub-link-color"
+                    >
                       Meet Our Team
                     </a>
                   </li>
@@ -131,7 +135,10 @@ const Footer = () => {
                   Contact Us
                 </Link>
                 <ul className="nav flex-column footer-ul mt-2">
-                  <li className="nav-item mb-2 w-fit ms-auto ms-md-0">
+                  <li
+                    className="nav-item mb-2 w-fit ms-auto ms-md-0"
+                    id="advisors"
+                  >
                     <a href="/#" className="nav-link p-0 sub-link-color">
                       Advisors
                     </a>
@@ -165,8 +172,8 @@ const Footer = () => {
                   month!
                 </p>
               </div>
-              <FooterSubscribe />
-              <p className="initialism mt-4 mt-sm-5 ms-auto text-end">
+              <Subscribe />
+              <p className="initialism mt-4 mt-sm-3 ms-auto text-end">
                 Communicate with your Preferred Travel Advisor or one of our
                 Specialists at +54 341 364 XXXX (ARG) for more information.
               </p>
@@ -196,7 +203,7 @@ const Footer = () => {
               <li className="ms-3">
                 <a
                   className="link-light"
-                  href="https://www.linkedin.com/in/erosdavidgomezcentofanti/"
+                  href="https://www.linkedin.com/in/erosdgc/"
                   target="_blank"
                 >
                   <i className="fa-brands fa-linkedin-in"></i>

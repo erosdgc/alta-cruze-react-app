@@ -24,7 +24,6 @@ const ComingSoon = () => {
           </div>
 
           <div className="d-flex flex-column align-items-center justify-content-center pb-md-0 py-4 mt-lg-2">
-            {/* <h3 className="lead inter-font fs-3">Follow us:</h3> */}
             <ul className="list-unstyled d-flex footer-brands fs-3 gap-4 mt-5 mt-md-0">
               <li className="ms-3">
                 <a

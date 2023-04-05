@@ -5,8 +5,6 @@ import { db } from "../../firebaseConfig";
 import "./Form.css";
 
 const Form = ({ handleId }) => {
-  // const [form, setForm] = useState({});
-
   // First Name Input Data
   const [firstName, setFirstName] = useState("");
   const handleFirstName = (e) => setFirstName(e.target.value);
@@ -38,22 +36,6 @@ const Form = ({ handleId }) => {
   // Price Data
   const { totalPrice, cart } = useContext(CartContext);
   const total = totalPrice();
-
-  // // "Global Form" Change Data
-  // const handleChange = (e) => {
-  //   setForm({
-  //     ...form,
-  //     [e.target.name]: e.target.value,
-  //   });
-  // };
-
-  // // "Global Form" Checked Data
-  // const handleChecked = (e) => {
-  //   setForm({
-  //     ...form,
-  //     [e.target.name]: e.target.checked,
-  //   });
-  // };
 
   // Form Submit Data
   const handleSubmit = (e) => {
@@ -202,6 +184,7 @@ const Form = ({ handleId }) => {
                       <a
                         href="https://en.wikipedia.org/wiki/Terms_of_service"
                         className="terms text-reset border-bottom border-primary"
+                        target="_blank"
                       >
                         Terms of Service & Conditions
                       </a>
