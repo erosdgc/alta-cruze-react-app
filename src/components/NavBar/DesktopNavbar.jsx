@@ -5,6 +5,7 @@ import { db } from "../../firebaseConfig";
 import { collection, getDocs } from "firebase/firestore";
 import { HashLink as Link } from "react-router-hash-link";
 import "./DesktopNavbar.css";
+import SearchModal from "./SearchModal";
 
 const DesktopNavbar = () => {
   // Category Logic
@@ -241,9 +242,7 @@ const DesktopNavbar = () => {
         <div className="my-auto px-3 px-xl-4">
           <ul className="navbar-nav flex-row align-items-center gap-3 gap-xl-4">
             <li className="nav-item nav-link">
-              <Link className="nav-link link-icon" to="/search">
-                <img className="search" src={search} alt="Search button" />
-              </Link>
+              <SearchModal />
             </li>
             <li className="nav-item nav-link">
               <div className="nav-link link-icon" to="/pre-checkout">

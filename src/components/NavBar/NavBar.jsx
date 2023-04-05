@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import logo from "../../assets/images/icon.png";
-import search from "../../assets/images/loupe.png";
 import CartWidget from "../CartWidget/CartWidget";
 import * as AiIcons from "react-icons/ai";
 import { IconContext } from "react-icons";
@@ -9,6 +8,7 @@ import { collection, getDocs } from "firebase/firestore";
 import { HashLink as Link } from "react-router-hash-link";
 import DesktopNavbar from "./DesktopNavbar";
 import "./Navbar.css";
+import SearchModal from "./SearchModal";
 // import NavContext from "../../context/NavContext";
 
 const Navbar = () => {
@@ -323,10 +323,11 @@ const Navbar = () => {
             </ul>
             <div className="mt-4 mt-xl-0">
               <ul className="navbar-nav flex-row align-items-center gap-4 gap-xl-0">
-                <li className="nav-item nav-link pe-2">
-                  <Link className="nav-link link-icon" to="/search">
+                <li className="nav-item nav-link pe-2" onClick={closeSidebar}>
+                  {/* <Link className="nav-link link-icon" to="/search">
                     <img className="search" src={search} alt="Search button" />
-                  </Link>
+                  </Link> */}
+                  <SearchModal />
                 </li>
                 <li className="nav-item dropdown nav-link ps-1">
                   <Link

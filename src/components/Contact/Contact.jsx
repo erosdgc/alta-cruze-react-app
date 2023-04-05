@@ -5,14 +5,14 @@ const Contact = () => {
   return (
     <div className="container-fluid background-gradient d-flex justify-content-center">
       <img
-        className="bg-img"
+        className="bg-img position-fixed"
         src="https://res.cloudinary.com/drulocuwt/image/upload/v1666924055/atlas-cruzer-react-app/heroes/contact_actuyi.jpg"
         alt="A message in a bottle"
       />
       <div className="container mt-fill content-over-img d-flex justify-content-center">
         <form className="col-12 col-lg-8 col-xl-8 validate-form rounded-0 shadow card border-0 p-4">
           <h1 className="display-4 text-sm-center mb-3 mb-lg-4">
-            Send Us A Message
+            Send Us a Message
           </h1>
           <label className="mt-1" htmlFor="firstName">
             First name:

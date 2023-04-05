@@ -8,7 +8,7 @@ const SubscribeModal = ({ showModal, setShowModal, modalMessage }) => {
 
   return (
     <Modal
-      className="subscribe-modal-container"
+      className="subscribe-modal"
       show={showModal}
       onHide={handleClose}
     >
